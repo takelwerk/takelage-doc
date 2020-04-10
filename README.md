@@ -59,9 +59,9 @@ Here are some answers:
   which violates the 
   [DRY](https://en.wikipedia.org/wiki/Don't_repeat_yourself)
   principle.
-- Dockerfiles can only produce docker images target no other platform. 
+- Dockerfiles can only produce docker images and target no other platform. 
 
-This is why we propose a new workflow to build docker images:
+This is why we propose an alternative workflow to build docker images:
 
 - Build the images with packer.
 - Write the provisioning code in ansible.
@@ -73,6 +73,12 @@ This is why we propose a new workflow to build docker images:
   [pytest](https://docs.pytest.org/en/latest/), 
   [testinfra](https://testinfra.readthedocs.io/en/latest/) and 
   [takeltest](https://github.com/geospin-takelage/takelage-var).
+
+We know that this is an opionated proposal.
+We release our software under the GPL so feel free
+to propose changes, report bugs or reuse all or parts of it.
+This is only one way to build virtual machines that
+works for us. So we want share and it we hope you like it.
 
 ## Nomenclature
 

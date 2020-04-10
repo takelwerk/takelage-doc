@@ -36,9 +36,9 @@ using the
 or running as
 [Azure Container Instances](https://azure.microsoft.com/en-us/services/container-instances/).
 But the most important virtualization technology is
-Google's [Kubernetes](https://kubernetes.io/) which has  
-gained wide-spread adoption in the DevOps community
-and can be considered as the default virtualization
+Google's [Kubernetes](https://kubernetes.io/) 
+which has gained wide-spread adoption in the DevOps community
+and can be considered the default virtualization
 environment to run docker containers.
 
 Docker containers are spawned from docker images and the

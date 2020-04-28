@@ -74,11 +74,11 @@ This is why we propose an alternative workflow to build docker images:
   [testinfra](https://testinfra.readthedocs.io/en/latest/) and 
   [takeltest](https://github.com/geospin-takelage/takelage-var).
 
-We know that this is an opionated proposal.
+We know that this is an opinionated proposal.
 We release our software under the GPL so feel free
 to propose changes, report bugs or reuse all or parts of it.
 This is only one way to build virtual machines that
-works for us. So we want share and it we hope you like it.
+works for us. So we want to share it and we hope you like it.
 
 ## Nomenclature
 

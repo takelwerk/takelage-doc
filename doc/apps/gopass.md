@@ -31,6 +31,13 @@ Let `/home/myuser/.local/share/gopass/stores/projects-my_project`
 be the file system path of your password store.
 You can examine the configuration by running `gopass config`.
 
+## Insert a Secret
+
+Use `gopass insert -m` or `gopass insert --multiline` 
+to insert new secrets. If you omit `--multiline` the string
+'Password: ' will be prepended to the password
+which will probably lead to a lot of confusion. 
+
 ## Clone a Store
 
 gopass password stores should only be cloned 

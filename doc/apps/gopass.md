@@ -72,3 +72,34 @@ of the store you want to delete.
 gopass mounts umount projects/my_project
 rm -fr /home/myuser/.local/share/gopass/stores/projects-my_project
 ```
+
+## Add or remove recipients
+
+Have a look at who has access to which password store:
+
+```bash
+gopass recipients
+```
+
+You can add or remove recipients by running
+`gopass recipients add` or `gopass recipients remove`.
+
+# Ansible Passwordstore Plugin
+
+By using gopass and the ansible 
+[passwordstore](https://docs.ansible.com/ansible/latest/collections/community/general/passwordstore_lookup.html)
+plugin we can separate the config
+(projects) and code (roles) from the permissions (passwords). 
+
+If each project has its own password store it is possible 
+to grant or revoke individual access for each project. 
+In case the access list of a password store is changed 
+all passwords will be reencrypted. 
+
+If you store the 
+[hash](https://docs.ansible.com/ansible/latest/reference_appendices/faq.html#how-do-i-generate-encrypted-passwords-for-the-user-module)
+of your sudo password in a password store 
+accessible by your fellow devops admins 
+then they are able to roll out 
+new sudo passwords for all admins.
+

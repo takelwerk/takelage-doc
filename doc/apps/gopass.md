@@ -63,7 +63,7 @@ cd /home/myuser/.local/share/gopass/stores/projects-my_project
 git remote add origin git@example.com:my_project/pass.git
 ```
 
-## Delete a store
+## Delete a Store
 
 Run `gopass config` to get the file system path 
 of the store you want to delete.

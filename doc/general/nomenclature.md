@@ -5,7 +5,8 @@
 ## Takelage Nomenclature
 
 [Takelage](https://de.wikipedia.org/wiki/Takelage) is the German word for
-[rigging](https://en.wikipedia.org/wiki/Rigging).  
+[rigging](https://en.wikipedia.org/wiki/Rigging).
+  
 It “comprises the system of ropes, cables and chains, 
 which support a sailing ship’s masts 
 and which adjust the position of the vessel’s 
@@ -13,6 +14,7 @@ sails and spars to which they are attached”.
 It symbolizes the software wiring 
 which configures the docker containers – 
 another word from the nautical world.
+
 It is 
 [pronounced](https://cdn.duden.de/_media_/audio/ID4112295_148090832.mp3)
 with a French ending.

@@ -14,7 +14,7 @@ build, test and deploy os images.
 
 ### Apps
 
-- [Gopass](doc/apps/gopass.md)
+- [gopass](doc/apps/gopass.md)
 
 ## Framework
 

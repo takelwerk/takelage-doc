@@ -2,7 +2,7 @@
 
 [Table of contents](../../README.md)
 
-## Gopass Password Manager
+## gopass Password Manager
 
 [gopass](https://www.gopass.pw/) is a rewrite of 
 [pass](https://www.passwordstore.org/) in 

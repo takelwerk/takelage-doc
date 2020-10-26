@@ -5,6 +5,17 @@ of the takelage devops workflow.
 The takelage devops workflow helps devops engineers
 build, test and deploy os images.
 
+## Table of Contents
+
+### General
+
+- [Introduction](doc/general/introduction.md)
+- [Nomenclature](doc/general/nomenclature.md)
+
+### Apps
+
+- [Gopass](doc/apps/gopass.md)
+
 ## Framework
 
 The takelage devops framework consists of these projects:
@@ -17,7 +28,3 @@ The takelage devops framework consists of these projects:
 | *[takelage-cli](https://github.com/geospin-takelage/takelage-cli)* | takelage command line interface |
 | *[takelage-bit](https://github.com/geospin-takelage/takelage-bit)* | takelage bit server | 
 
-## Table of contents
-
-- [Introduction](doc/general/introduction.md)
-- [Nomenclature](doc/general/nomenclature.md)

@@ -32,7 +32,7 @@ Let `development/my_project` be the mount path of
 the password store in the gopass password hierarchy.
 Let `/home/myuser/.local/share/gopass/stores/projects-my_project`
 be the file system path of your password store.
-You can examine the configuration by running `gopass config`.
+You can examine your configuration by running `gopass config`.
 
 ## Insert a Secret
 

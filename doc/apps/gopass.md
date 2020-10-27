@@ -6,8 +6,9 @@
 
 [gopass](https://github.com/gopasspw/gopass)
 is a password manager for teams.
-It's strength is its relatively simple mind set.
-passwords are stored in gpg-encrypted text files in a git repository.
+gopass has a relatively simple mind set.
+passwords are stored in gpg-encrypted text files 
+in git repositories which form a password tree.
 (go)pass makes use of of a powerful 
 [git feature](https://lists.zx2c4.com/pipermail/password-store/2014-May/000940.html):
 git can act transparently on gpg files.

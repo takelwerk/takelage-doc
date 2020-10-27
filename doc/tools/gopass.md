@@ -145,3 +145,13 @@ inside the docker container.
 This way, changes to gopass inside of the container 
 will result in changes outside of the container.
  
+# Undocumented Feature
+
+The `project.yml` is interpreted as an 
+[eRuby](https://en.wikipedia.org/wiki/ERuby) ERB file
+so you have the full power of ruby at your disposal.
+You may use it for example to 
+[call gopass](https://github.com/geospin-takelage/takelage-cli/blob/master/features/cucumber/features/info/info.project.pass.feature)
+to inject secrets into every part of takelage.
+Just call `tau project` to get a resolved YAML file.
+Use it scarcely and wisely!

@@ -7,11 +7,13 @@
 [gopass](https://www.gopass.pw/) is a rewrite of 
 [pass](https://www.passwordstore.org/) in 
 [go](https://golang.org/) with additional features. 
-gopass uses the same 
+gopass uses 
+([for now](https://github.com/gopasspw/gopass/releases/tag/v1.10.0)) 
+the same 
 [gpg](https://www.gnupg.org/) encrypted text files as pass 
 so third-party apps like the ansible 
 [passwordstore](https://docs.ansible.com/ansible/latest/plugins/lookup/passwordstore.html)
-lookup plugin works. Unlike pass, gopass uses sub-stores
+lookup plugin work. Unlike pass, gopass uses sub-stores
 which can be mounted in the password tree with different
 [git](https://git-scm.com) origins.
 

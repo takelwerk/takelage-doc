@@ -110,3 +110,21 @@ accessible by your fellow devops admins
 then they are able to roll out 
 new sudo passwords for all admins.
 
+# Integration with takelage-dev
+
+gopass is integrated into
+[takelage-dev](https://github.com/geospin-takelage/takelage-dev)
+through the
+[takelscripts](https://github.com/geospin-takelage/takelage-dev/tree/master/ansible/roles/takel-takelage/files/takelscripts).
+The function
+[Entrypoint::add_gopass](https://github.com/geospin-takelage/takelage-dev/blob/48d05bd5ca3c300c45739083685306a5a0e5d462/ansible/roles/takel-takelage/files/takelscripts/entrypoint.py#L150)
+assumes that the gopass config is located at 
+*~/.config/gopass/config.yml* which was not always
+the case in older gopass versions.
+The config file will be symlinked inside the docker container
+The python script then calls `gopass config` and 
+parses the output to symlink the password store directories 
+inside the docker container.
+This way, changes to gopass inside of the container 
+will result in changes outside of the container.
+ 

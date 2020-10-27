@@ -4,7 +4,16 @@
 
 ## gopass Password Manager
 
-[gopass](https://www.gopass.pw/) is a rewrite of 
+[gopass](https://github.com/gopasspw/gopass)
+is a password manager for teams.
+It's strength is its relatively simple mind set.
+passwords are stored in gpg-encrypted text files in a git repository.
+(go)pass makes use of of a powerful 
+[git feature](https://lists.zx2c4.com/pipermail/password-store/2014-May/000940.html):
+git can act transparently on gpg files.
+
+[gopass](https://www.gopass.pw/) 
+is a rewrite of 
 [pass](https://www.passwordstore.org/) in 
 [go](https://golang.org/) with additional features. 
 gopass uses 
@@ -46,10 +55,11 @@ which will probably lead to a lot of confusion.
 
 gopass password stores should only be cloned 
 on your host system and not in a takelage container.
-You have to restart takelage container after you
-have cloned a new store so that it becomes available
-in the container.
-You will be asked for your name and mail address.
+Afterwards, you should restart 
+all running takelage containers by running `tau clean`
+on your host after cloning a new store so
+that the changes take effect.
+You will be asked for your name and email address.
 These values should correspond to the ones in your git config.
 
 ```bash
@@ -66,7 +76,9 @@ gopass init --store projects/my_project
 ```
 
 After cloning, gopass tells you the file system path 
-of your new store. Change into that directory and 
+of your new store or you can run `tau config`
+to get the path.
+Change into that directory and 
 add a newly created git repository as origin:
 
 ```bash
@@ -86,7 +98,7 @@ rm -fr /home/myuser/.local/share/gopass/stores/projects-my_project
 
 ## Add or remove recipients
 
-Have a look at who has access to which password store:
+Have a look at who has access to which password stores:
 
 ```bash
 gopass recipients
@@ -100,7 +112,7 @@ You can add or remove recipients by running
 By using gopass and the ansible 
 [passwordstore](https://docs.ansible.com/ansible/latest/collections/community/general/passwordstore_lookup.html)
 plugin we can separate the config
-(projects) and code (roles) from the permissions (passwords). 
+(projects) and code (roles) from the permissions (passwordstore). 
 
 If each project has its own password store it is possible 
 to grant or revoke individual access for each project. 

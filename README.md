@@ -12,9 +12,9 @@ build, test and deploy os images.
 - [Introduction](doc/general/introduction.md)
 - [Nomenclature](doc/general/nomenclature.md)
 
-### Apps
+### Tools
 
-- [gopass](doc/apps/gopass.md)
+- [gopass](doc/tools/gopass.md)
 
 ## Framework
 

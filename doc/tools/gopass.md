@@ -108,7 +108,7 @@ gopass recipients
 You can add or remove recipients by running
 `gopass recipients add` or `gopass recipients remove`.
 
-# Ansible Passwordstore Plugin
+## Ansible Passwordstore Plugin
 
 By using gopass and the ansible 
 [passwordstore](https://docs.ansible.com/ansible/latest/collections/community/general/passwordstore_lookup.html)
@@ -127,7 +127,7 @@ accessible by your fellow devops admins
 then they are able to roll out 
 new sudo passwords for all admins.
 
-# Integration with takelage-dev
+## Integration with takelage-dev
 
 gopass is integrated into
 [takelage-dev](https://github.com/geospin-takelage/takelage-dev)
@@ -145,7 +145,7 @@ inside the docker container.
 This way, changes to gopass inside of the container 
 will result in changes outside of the container.
  
-# Undocumented Feature
+## Undocumented Feature
 
 The `project.yml` is interpreted as an 
 [eRuby](https://en.wikipedia.org/wiki/ERuby) ERB file

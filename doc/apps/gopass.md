@@ -21,7 +21,8 @@ which can be mounted in the password tree with different
 
 gopass is a moving target.
 The API changed a lot prior to version 1.10.
-This documentation uses gopass 1.10.1.
+This documentation uses 
+[gopass 1.10.1](https://github.com/gopasspw/gopass/releases/tag/v1.10.1).
 
 ## Definitions
 

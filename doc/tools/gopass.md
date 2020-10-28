@@ -27,8 +27,10 @@
 
 ## gopass Password Manager
 
-[gopass](https://github.com/gopasspw/gopass)
-is a password manager for teams.
+[gopass](https://www.gopass.pw/) 
+is a an
+[open source](https://github.com/gopasspw/gopass)
+password manager for teams.
 gopass has a relatively simple mind set.
 passwords are stored in gpg-encrypted text files 
 in git repositories which form a password tree.
@@ -36,8 +38,7 @@ in git repositories which form a password tree.
 [git feature](https://lists.zx2c4.com/pipermail/password-store/2014-May/000940.html):
 git can act transparently on gpg files.
 
-[gopass](https://www.gopass.pw/) 
-is a rewrite of 
+gopass is a rewrite of 
 [pass](https://www.passwordstore.org/) in 
 [go](https://golang.org/) with additional features. 
 gopass uses 

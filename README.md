@@ -14,6 +14,7 @@ build, test and deploy os images.
 
 ### Tools
 
+- [bit](doc/tools/bit.md)
 - [gopass](doc/tools/gopass.md)
 
 ## Framework

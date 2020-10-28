@@ -2,7 +2,17 @@
 
 [Table of contents](../../README.md)
 
-[TOC]
+## Overview 
+
+[Introduction](#introduction)
+[Usage](#usage)
+[Ansible](#ansible)
+[Integration](#integration)
+[Miscellaneous](#miscellaneous)
+
+<a name="introduction"/>
+
+# Introduction
 
 ## gopass Password Manager
 
@@ -46,6 +56,10 @@ Let `/home/myuser/.local/share/gopass/stores/projects-my_project`
 be the file system path of your password store.
 
 You can examine your configuration by running `gopass config`.
+
+<a name="usage"/>
+
+# Usage
 
 ## Insert a Secret
 
@@ -110,6 +124,10 @@ gopass recipients
 You can add or remove recipients by running
 `gopass recipients add` or `gopass recipients remove`.
 
+<a name="ansible"/>
+
+# Ansible
+
 ## Ansible Passwordstore Plugin
 
 By using gopass and the ansible 
@@ -129,6 +147,10 @@ accessible by your fellow devops admins
 then they are able to roll out 
 new sudo passwords for all admins.
 
+<a name="integration"/>
+
+# Integration
+
 ## Integration with takelage-dev
 
 gopass is integrated into
@@ -146,6 +168,10 @@ parses the output to symlink the password store directories
 inside the docker container.
 This way, changes to gopass inside of the container 
 will result in changes outside of the container.
+ 
+<a name="miscellaneous"/>
+ 
+# Miscellaneous
  
 ## Undocumented Feature
 

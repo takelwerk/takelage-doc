@@ -5,6 +5,9 @@
 ## Overview 
 
 - [Introduction](#introduction)
+  - [gopass](#gopass)
+  - [Version](#version)
+  - [Definitions](#definitions)
 - [Usage](#usage)
   - [Insert](#insert)
   - [Clone](#clone)
@@ -19,6 +22,8 @@
 <a name="introduction"/>
 
 # Introduction
+
+<a name="gopass"/>
 
 ## gopass Password Manager
 
@@ -45,12 +50,16 @@ lookup plugin work. Unlike pass, gopass uses sub-stores
 which can be mounted in the password tree with different
 [git](https://git-scm.com) origins.
 
-## Versions
+<a name="version"/>
+
+## Version
 
 gopass is a moving target.
 The API changed a lot prior to version 1.10.
 This documentation uses 
 [gopass 1.10.1](https://github.com/gopasspw/gopass/releases/tag/v1.10.1).
+
+<a name="definitions"/>
 
 ## Definitions
 

@@ -6,6 +6,11 @@
 
 - [Introduction](#introduction)
   - [bit](#bit)
+- [Usage](#usage)
+  - [Copy](#copy)
+  - [Paste](#paste)
+  - [Push](#push)
+  - [Pull](#pull)
 
 <a name="introduction"/>
 
@@ -48,3 +53,35 @@ The takelage devops workflow uses the open source parts of bit.
 The bit part of takelage is targeting devops engineers.
 It enables them to share parts of their git repositories.
 And they may inject private data into open source projects.
+
+<a name="usage"/>
+
+# Usage
+
+bit is meant for JavaScript.
+As we want to use to share general components
+we have to switch off the JavaScript part.
+Futhermore, most fine-grained bit operations 
+are not needed in daily usage. 
+
+For these reasons,
+[takelage-cli](https://github.com/geospin-takelage/takelage-cli)
+chains certain bit commands and wraps.
+This way, `tau` provides a high-level cli to bit
+without reengineering bit's features.
+
+## Copy a component
+
+<a name="copy"/>
+
+## Paste a component
+
+<a name="paste"/>
+
+## Push all components
+
+<a name="push"/>
+
+## Pull all components
+
+<a name="pull"/>

@@ -65,6 +65,9 @@ For these reasons,
 chains certain bit commands and wraps.
 This way, `tau` provides a high-level cli to bit
 without reengineering bit's features.
+See the 
+[cucumber features](https://github.com/geospin-takelage/takelage-cli#commands)
+for a more technical but living documentation.
 
 ## Copy a component
 

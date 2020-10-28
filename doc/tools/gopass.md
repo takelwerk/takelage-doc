@@ -6,12 +6,12 @@
 
 - [Introduction](#introduction)
 - [Usage](#usage)
-- [Ansible](#ansible)
   - [Insert](#insert)
   - [Clone](#clone)
   - [Create](#create)
   - [Delete](#delete)
   - [Recipients](#recipients)
+- [Ansible](#ansible)
 - [Integration](#integration)
 - [Miscellaneous](#miscellaneous)
 

@@ -2,6 +2,8 @@
 
 [Table of contents](../../README.md)
 
+[TOC]
+
 ## gopass Password Manager
 
 [gopass](https://github.com/gopasspw/gopass)

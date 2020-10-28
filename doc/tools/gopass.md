@@ -165,7 +165,7 @@ new sudo passwords for all admins using ansible's
 
 Or you can add your static SSH host keys in gopass so that you 
 do not have to edit your `known_hosts` file all the time.
-For this, add a file `ansible/group_vars/all/pass.yml` with
+For this, add a file `ansible/group_vars/all/pass.yml`:
 
 ```yaml
 ---

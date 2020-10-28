@@ -12,8 +12,9 @@
   - [Delete](#delete)
   - [Recipients](#recipients)
 - [Ansible](#ansible)
+  - [Plugin](#plugin)
+  - [Mallet](#mallet)
 - [Integration](#integration)
-- [Miscellaneous](#miscellaneous)
 
 <a name="introduction"/>
 
@@ -143,6 +144,8 @@ You can add or remove recipients by running
 
 # Ansible
 
+<a name="plugin"/>
+
 ## Passwordstore Plugin
 
 By using gopass and the ansible 
@@ -192,6 +195,8 @@ The passwordstore plugin uses `pass` so takelage comes with
 gopass show "$1"
 ```
 
+<a name="mallet"/>
+
 ## Mallet Method
 
 The `project.yml` is interpreted as an 
@@ -230,8 +235,6 @@ Use this feature scarcely and wisely!
 <a name="integration"/>
 
 # Integration
-
-## takelage-dev
 
 gopass is integrated into
 [takelage-dev](https://github.com/geospin-takelage/takelage-dev)

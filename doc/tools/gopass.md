@@ -204,7 +204,7 @@ Just call `tau project` to get a resolved YAML file.
 
 Although the ansible passwordstore plugin is preferable
 you can use this feature to access secrets in ansible.
-Just add a file `ansible/group_vars/all/project.yml` with
+Just add a file `ansible/group_vars/all/project.yml`:
 
 ```yaml
 ---

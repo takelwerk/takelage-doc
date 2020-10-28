@@ -4,11 +4,11 @@
 
 ## Overview 
 
-[Introduction](#introduction)
-[Usage](#usage)
-[Ansible](#ansible)
-[Integration](#integration)
-[Miscellaneous](#miscellaneous)
+- [Introduction](#introduction)
+- [Usage](#usage)
+- [Ansible](#ansible)
+- [Integration](#integration)
+- [Miscellaneous](#miscellaneous)
 
 <a name="introduction"/>
 

@@ -143,7 +143,7 @@ You can add or remove recipients by running
 
 # Ansible
 
-## Ansible Passwordstore Plugin
+## Passwordstore Plugin
 
 By using gopass and the ansible 
 [passwordstore](https://docs.ansible.com/ansible/latest/collections/community/general/passwordstore_lookup.html)
@@ -155,12 +155,63 @@ to grant or revoke individual access for each project.
 In case the access list of a password store is changed 
 all passwords will be reencrypted. 
 
-If you store the 
+For example, if you store the 
 [hash](https://docs.ansible.com/ansible/latest/reference_appendices/faq.html#how-do-i-generate-encrypted-passwords-for-the-user-module)
 of your sudo password in a password store 
 accessible by your fellow devops admins 
 then they are able to roll out 
-new sudo passwords for all admins.
+new sudo passwords for all admins using ansible's
+[user plugin](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/user_module.html).
+
+Or you can add your static SSH host keys in gopass so that you 
+do not have to edit your `known_hosts` file all the time.
+For this, add a file `ansible/group_vars/all/pass.yml` with
+
+```yaml
+---
+pass:
+  group_vars_all_takel_users_root_password_hash: >-
+    /path/in/gopass/to/myproject/group_vars/all/takel_admin_myproject_root_password_hash
+```
+
+You can then use it in `ansible/group_vars/all/takel-users.yml`
+to map the secret to an ansible variable using the lookup plugin:
+
+```yaml
+---
+takel_users_root_password_hash: >-
+  {{ lookup('passwordstore', pass.group_vars_all_takel_users_root_password_hash) }}
+```
+
+The passwordstore plugin uses `pass` so takelage comes with
+`/usr/local/bin/pass`:
+
+```bash
+#!/bin/bash
+
+gopass show "$1"
+```
+
+## Mallet Method
+
+The `project.yml` is interpreted as an 
+[eRuby](https://en.wikipedia.org/wiki/ERuby) ERB file
+so you have the full power of ruby at your disposal.
+You may use it for example to 
+[call gopass](https://github.com/geospin-takelage/takelage-cli/blob/master/features/cucumber/features/info/info.project.pass.feature)
+to inject secrets into every part of takelage.
+Just call `tau project` to get a resolved YAML file.
+
+Although the ansible passwordstore plugin is preferable
+you can use this feature to access secrets in ansible.
+Just add a file `ansible/group_vars/all/project.yml` with
+
+```yaml
+---
+project: "{{ lookup('pipe', 'tau project') | from_yaml }}"
+```
+
+Use this feature scarcely and wisely!
 
 <a name="integration"/>
 
@@ -183,18 +234,3 @@ parses the output to symlink the password store directories
 inside the docker container.
 This way, changes to gopass inside of the container 
 will result in changes outside of the container.
- 
-<a name="miscellaneous"/>
- 
-# Miscellaneous
- 
-## Undocumented Feature
-
-The `project.yml` is interpreted as an 
-[eRuby](https://en.wikipedia.org/wiki/ERuby) ERB file
-so you have the full power of ruby at your disposal.
-You may use it for example to 
-[call gopass](https://github.com/geospin-takelage/takelage-cli/blob/master/features/cucumber/features/info/info.project.pass.feature)
-to inject secrets into every part of takelage.
-Just call `tau project` to get a resolved YAML file.
-Use it scarcely and wisely!

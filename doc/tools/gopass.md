@@ -211,6 +211,20 @@ Just add a file `ansible/group_vars/all/project.yml`:
 project: "{{ lookup('pipe', 'tau project') | from_yaml }}"
 ```
 
+If your `project.yml` looks like this:
+
+```yaml
+---
+my_secret_var: <%= `pass my_project/my_secret_key` %>
+```
+
+Then you can access it in your ansible like so:
+
+```yaml
+---
+my_var: "{{ project['my_secret_var'] }}"
+```
+
 Use this feature scarcely and wisely!
 
 <a name="integration"/>

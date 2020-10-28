@@ -24,6 +24,7 @@
 [open-source](https://github.com/teambit/bit)
 cli tool for collaborating on isolated components 
 across projects and repositories.
+It solves the problem to share parts of git repositories.
 
 bit is a 
 [git](https://git-scm.com) extension.
@@ -47,11 +48,7 @@ developed by Cocycles, the company behind
 
 bit.dev's intended audience is the javascript community and
 they also host the best resources for bit: 
-the [bit docs](https://docs.bit.dev/docs/faq).
-
-The takelage devops workflow uses the open source parts of bit.
-The bit part of takelage is targeting devops engineers.
-It enables them to share parts of their git repositories.
+the [bit docs](https://docs.bit.dev/).
 
 <a name="usage"/>
 

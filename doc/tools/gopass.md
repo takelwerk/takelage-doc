@@ -166,7 +166,7 @@ new sudo passwords for all admins.
 
 # Integration
 
-## Integration with takelage-dev
+## takelage-dev
 
 gopass is integrated into
 [takelage-dev](https://github.com/geospin-takelage/takelage-dev)

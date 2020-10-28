@@ -7,6 +7,11 @@
 - [Introduction](#introduction)
 - [Usage](#usage)
 - [Ansible](#ansible)
+  - [Insert](#insert)
+  - [Clone](#clone)
+  - [Create](#create)
+  - [Delete](#delete)
+  - [Recipients](#recipients)
 - [Integration](#integration)
 - [Miscellaneous](#miscellaneous)
 
@@ -61,12 +66,16 @@ You can examine your configuration by running `gopass config`.
 
 # Usage
 
+<a name="insert"/>
+
 ## Insert a Secret
 
 Use `gopass insert -m` or `gopass insert --multiline` 
 to insert new secrets. If you omit `--multiline` the string
 'Password: ' will be prepended to the password
 which will probably lead to a lot of confusion. 
+
+<a name="clone"/>
 
 ## Clone a Store
 
@@ -82,6 +91,8 @@ These values should correspond to the ones in your git config.
 ```bash
 gopass clone git@example.com:my_project/pass.git projects/my_project
 ```
+
+<a name="create"/>
 
 ## Create a Store
 
@@ -103,6 +114,8 @@ cd /home/myuser/.local/share/gopass/stores/projects-my_project
 git remote add origin git@example.com:my_project/pass.git
 ```
 
+<a name="delete"/>
+
 ## Delete a Store
 
 Run `gopass config` to get the file system path 
@@ -112,6 +125,8 @@ of the store you want to delete.
 gopass mounts umount projects/my_project
 rm -fr /home/myuser/.local/share/gopass/stores/projects-my_project
 ```
+
+<a name="recipients"/>
 
 ## Add or remove recipients
 

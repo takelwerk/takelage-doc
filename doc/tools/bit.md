@@ -233,7 +233,7 @@ dangerous for a daily option.
 You can remove a custom bit remote scope by using
 `tau bit scope inbit` and then `rm -fr /bit/myscope`.
 
-<a name="reuqire"/>
+<a name="require"/>
 
 # Usage tau bit require
 

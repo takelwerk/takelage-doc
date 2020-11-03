@@ -8,6 +8,10 @@
   - [docker](#docker)
 - [Usage tau docker container](#container)
   - [tau login](#login)
+  - [tau prune](#prune)
+  - [tau clean](#clean)
+  - [tau command](#command)
+  - [tau daemon](#daemon)
 
 <a name="introduction"/>
 
@@ -40,11 +44,80 @@ and is also part of the takelage docker image.
 
 `tau login` which is an alias for `tau docker container login`
 creates a docker container from the takelage docker image
-specific for the current working directory of the host
-if it does not exist yet.
+specific for the current working directory on the host
+if no such container exists yet.
 If a takelage docker container for the current working directory
-already exists `tau login` will log in to that container.
+already exists then `tau login` will log in to that container.
 
 ```bash
 tau login
+```
+
+`tau login` will do a lot of background work and from time
+to time there might be some problems. In these cases run
+`tau` in debug mode so that you see what's going on:
+
+```bash
+tau login -l debug
+```
+
+`tau login` will create a docker network for each
+takelage container it creates.
+
+You cannot log in to a takelage container
+from within a takelage container (“matryoshka test”).
+
+<a name="prune"/>
+
+## tau prune: delete orphaned takelage containers
+
+`tau prune` which is an alias for `tau docker container prune`
+will remove those takelage containers 
+(and the corresponding docker networks)
+which have no active shell.
+
+```bash
+tau prune
+```
+
+This command can be run from within a takelage container
+as you have an active login shell in that container.
+
+<a name="clean"/>
+
+## tau clean: delete all takelage containers
+
+`tau clean` which is an alias for `tau docker container clean`
+will remove all takelage containers
+(and the corresponding docker networks).
+
+```bash
+tau clean
+```
+
+This command cannot be only be run on the host
+but not from within a takelage container.
+
+<a name="command"/>
+
+## tau docker container command: run a command in a takelage container
+
+`tau docker container command` will run a command in the
+takelage container of the current working directory on the host.
+If no such container exists it will create one.
+
+```bash
+tau docker container command 'ls -la /project'
+```
+
+<a name="daemon"/>
+
+## tau docker container daemon: start a takelage container in the background
+
+`tau docker container daemon` starts a takelage container for the
+current working directory if it does not exist yet
+without logging in to the container.
+
+```bash
+tau docker container daemon
 ```

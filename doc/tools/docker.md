@@ -12,6 +12,8 @@
   - [tau clean](#clean)
   - [tau command](#command)
   - [tau daemon](#daemon)
+- [Usage tau docker image](#image)
+  - [tau update](#update)
 
 <a name="introduction"/>
 
@@ -120,4 +122,21 @@ without logging in to the container.
 
 ```bash
 tau docker container daemon
+```
+
+<a name="image"/>
+
+# Usage tau docker image
+
+<a name="update"/>
+
+## tau update: get the latest takelage docker image
+
+`tau update` which is an alias for `tau docker image update`
+will check for a new 
+[takelage docker image](https://hub.docker.com/r/takelage/takelage/tags)
+on dockerhub.com and download it.
+
+```bash
+tau update
 ```

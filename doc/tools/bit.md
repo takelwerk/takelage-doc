@@ -6,13 +6,21 @@
 
 - [Introduction](#introduction)
   - [bit](#bit)
-  - [Warnings](#warnings)
+  - [Warning](#warning)
   - [Definitions](#definitions)
-- [Usage](#usage)
-  - [Copy](#copy)
-  - [Paste](#paste)
-  - [Push](#push)
-  - [Pull](#pull)
+- [Usage tau bit clipboard](#clipboard)
+  - [tau copy](#copy)
+  - [tau paste](#paste)
+  - [tau push](#push)
+  - [tau pull](#pull)
+- [Usage tau bit scope](#scope)
+  - [tau bit scope add](#add)
+  - [tau bit scope list](#list)
+  - [tau bit scope new](#new)
+  - [tau bit scope inbit](#inbit)
+- [Usage tau bit require](#require)
+  - [tau bit require export](#export)
+  - [tau bit require import](#import)
 
 <a name="introduction"/>
 
@@ -66,9 +74,9 @@ See the
 [cucumber features](https://github.com/geospin-takelage/takelage-cli#commands)
 for a more technical but living documentation.
 
-<a name="warnings"/>
+<a name="warning"/>
 
-## Warnings
+## Warning
 
 bit is a stateful tool. 
 This means, that there is a single global resource
@@ -88,13 +96,42 @@ relative to the project root directory.
 Let `myscope` be a scope either on `bit.dev`
 or on a private bit server.
 
-<a name="usage"/>
+<a name="clipboard"/>
 
-# Usage
+# Usage tau bit clipboard
+
+<a name="push"/>
+
+## tau push: upload all components
+
+`tau push` (which is an alias for `tau bit clipboard push`)
+will push every change in all components of a project to
+their remote scopes. 
+
+```bash
+tau push
+```
+
+`tau push` chains `bit tag --all`, 
+`bit export --all` and `bit status`.
+
+<a name="pull"/>
+
+## tau pull: download all components
+
+`tau pull` (which is an alias for `tau bit clipboard pull`)
+will pull every remotely changed component of a project.
+
+```bash
+tau pull
+```
+
+`tau pull` chains `bit import`, 
+`bit checkout --all latest` and `bit status`.
 
 <a name="copy"/>
 
-## Copy a component
+## tau copy: upload one component
 
 `tau copy` (which is an alias for `tau bit clipboard copy`)
 copys a directory as a bit component to a scope.
@@ -110,7 +147,7 @@ which may be edited but must not be deleted.
 
 <a name="paste"/>
 
-## Paste a component
+## tau paste: download one component
 
 `tau paste` (which is an alias for `tau bit clipboard paste`)
 pastes a bit component from a scope as a directory.
@@ -121,29 +158,119 @@ tau paste myscope/mydir/mycomponent /mydir/mycomponent
 
 `tau paste` chains `bit import`, `bit checkout` and `bit status`.
 
-<a name="push"/>
+<a name="scope"/>
 
-## Push all components
+# Usage tau bit scope
 
-`tau push` (which is an alias for `tau bit clipboard push`)
-will push every change in all components of a project to
-their remote scopes. 
+A bit scope is a directory in which `bit init --bare` has been executed.
+This can be a directory on the local machine or on a remote server.
+In the latter case the scope is called a remote scope.
+“Built-in” remote scopes are those on
+[bit.dev](https://bit.dev/).
+Custom remote scopes are located on a 
+[custom bit server](https://github.com/geospin-takelage/takelage-bit)
+and have to be added to a local bit workspace
+before they can be used.
 
-```bash
-tau push
+If you want to use a custom bit server with `tau`
+you have to set two configuration options,
+e.g. in your `~/.takelage.yml`:
+
+```yaml
+bit_remote: ssh://bit@exmaple.com:2222:/bit
+bit_ssh: ssh -p 2222 bit@example.com
 ```
 
-`tau push` chains `bit tag`, `bit export` and `bit status`.
+<a name="add"/>
 
-<a name="pull"/>
+## tau bit scope add: add a scope to local workspace 
 
-## Pull all components
-
-`tau pull` (which is an alias for `tau bit clipboard pull`)
-will pull every remotely changed component of a project.
+`tau bit scope add` makes a remote scope on a custom bit server
+(as opposed to a scope on `bit.dev`) 
+available in a local bit workspace.
 
 ```bash
-tau pull
+tau bit scope add bitboard.myscope
 ```
 
-`tau pull` chains `bit import`, `bit checkout` and `bit status`.
+`tau bit scope add` is a wrapper for `bit remote add`.
+
+<a name="list"/>
+
+## tau bit scope list: list remote scopes
+
+`tau bit scope list` will list the remote scopes on a custom bit server.
+These scopes can then be added with `tau bit scope add`.
+
+```bash
+tau bit scope list
+```
+
+<a name="new"/>
+
+## tau bit scope new: create a new remote scope
+
+`tau bit scope new` creates a new remote scope on a custom bit server.
+
+```bash
+tau bit scope new myscope
+```
+
+<a name="inbit"/>
+
+## tau bit scope inbit: log in to a remote bit server
+
+`tau bit scope inbit` will ssh in to the configured custom bit server.
+
+```bash
+tau bit scope inbit
+```
+
+This command can be used for debugging purposes
+and to remove custom remote bit scopes.
+`tau` does not expose scope deletion as it is considered too
+dangerous for a daily option.
+You can remove a custom bit remote scope by using
+`tau bit scope inbit` and then `rm -fr /bit/myscope`.
+
+<a name="reuqire"/>
+
+# Usage tau bit require
+
+`tau bit require` can  “clone” a project in the
+sense that it will install all bit components
+which are installed in a source project 
+in the destination project.
+
+<a name="export"/>
+
+## tau bit require export: list bit components 
+
+`tau bit require export` will list the bit scopes and components
+of a project.
+
+```bash
+tau bit require export
+```
+
+You can save the bit scopes and components of a project
+by redirecting the output to a file:
+
+```bash
+tau bit require export > bitrequire.yml
+```
+
+<a name="import"/>
+
+## tau bit require import: bulk install bit components 
+
+`tau bit require import` will read bit components from 
+a `bitrequire.yml` file and install them.
+
+```bash
+tau bit require import
+```
+
+At the moment, you have to add custom remote bit scopes
+to the local workspace so that `bit require import`
+to install the components in those scopes.

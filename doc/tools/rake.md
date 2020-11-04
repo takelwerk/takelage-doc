@@ -6,8 +6,10 @@
 
 - [Introduction](#introduction)
   - [rake](#rake)
-  - [example](#example)
+  - [Examples](#example)
 - [Usage rake ansible](#ansible)
+- [Usage rake image](#image)
+- [Usage rake project](#project)
 
 <a name="introduction"/>
 
@@ -58,12 +60,39 @@ rake -P
 
 <a name="example"/>
 
-## Example
+## Examples
 
-Let's have a look at a minimal example.
-We want a rake shortcut to create a git tag
-with the project version if such a tag 
-does not exist yet 
+Let's have a look at two examples.
+We start with a rake shortcut for a call of
+[rubocop](https://github.com/rubocop-hq/rubocop)
+with some custom options. 
+
+Relative to our project root, we create the file 
+`rake/rubylint/Rakefile` with this content:
+
+```ruby
+# frozen_string_literal: true
+
+cmd_rubylint = 'rubocop --parallel --display-style-guide'
+
+desc 'Run ruby linter'
+task :rubylint do
+  @commands << cmd_rubylint
+end
+```
+
+This Rakefile (in combination with the 
+[rake meta bit component](https://github.com/geospin-takelage/takelage-dev/blob/master/rake/meta/Rakefile))
+gives us a rake shortcut:
+
+```bash
+rake rubylint
+```
+
+A lightly more complex example is a 
+rake shortcut to create a git tag
+with the project version 
+if such a tag does not exist yet 
 and push the local tags to remote afterwards.
 
 Relative to our project root, we create the file 
@@ -90,9 +119,7 @@ namespace :git do
 end
 ```
 
-This Rakefile (in combination with the 
-[rake meta bit component](https://github.com/geospin-takelage/takelage-dev/blob/master/rake/meta/Rakefile))
-gives us a rake shortcut
+This Rakefile gives us a rake shortcut:
 
 ```bash
 rake git:tag
@@ -115,7 +142,8 @@ production environment building on the
 [takelbase](https://hub.docker.com/r/takelage/takelbase)
 docker base image.
 
-Similar tasks exist for every role and for every molecule command.
+Similar tasks exist for every molecule command for the project
+and for every ansible role.
 So in this case, a handful of Rakefiles can lead to dozens of tasks.
 
 You can have a look what commands a task will run by appending `run=dry`:
@@ -124,3 +152,16 @@ You can have a look what commands a task will run by appending `run=dry`:
 $ rake ansible:docker:takelbase:project:prod:from_base:converge run=dry
 cd ansible && bash -c 'TAKELAGE_PROJECT_ENV=prod TAKELAGE_PROJECT_BASE_IMAGE=takelage/takelbase TAKELAGE_PROJECT_NAME=takelage-dev TAKELAGE_MOLECULE_CONVERGE_PLAYBOOK=playbook-project-base.yml molecule converge --scenario-name default'
 ```
+
+<a name="image"/>
+
+# Usage rake image
+
+Another rake namespace which is almost always present is `rake image`.
+
+
+<a name="project"/>
+
+# Usage rake project
+
+

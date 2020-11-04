@@ -14,8 +14,8 @@ build, test and deploy os images.
 
 ### tau
 
-- [tau docker](doc/tools/tau_docker.md)
-- [tau bit](doc/tools/tau_bit.md)
+- [tau docker](doc/tau/tau_docker.md)
+- [tau bit](doc/tau/tau_bit.md)
 
 ### Tools
 

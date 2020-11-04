@@ -1,4 +1,4 @@
-# takelage-doc: bit
+# takelage-doc: tau bit
 
 [Table of contents](../../README.md)
 

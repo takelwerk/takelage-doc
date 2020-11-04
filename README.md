@@ -20,6 +20,7 @@ build, test and deploy os images.
 ### Tools
 
 - [gopass](doc/tools/gopass.md)
+- [rake](doc/tools/rake.md)
 
 ## Framework
 

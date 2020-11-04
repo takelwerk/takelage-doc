@@ -97,7 +97,7 @@ will remove all takelage containers
 tau clean
 ```
 
-This command cannot be only be run on the host
+This command can only be run on the host
 but not from within a takelage container.
 
 <a name="command"/>

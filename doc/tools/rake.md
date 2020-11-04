@@ -44,18 +44,11 @@ and outsource the heavy work to library files
 which are plain ruby files that can be found 
 in lib directories.
 
-You can have a look at the rake tasks by running
+In takelage, `rake` is a shortcut for `rake -T` which
+shows all currently available rake tasks:
 
 ```
 rake
-```
-
-In takelage, this is a shortcut for `rake -T` which
-shows all currently available rake tasks.
-You can display all tasks with their dependencies with
-
-```bash
-rake -P
 ```
 
 <a name="example"/>
@@ -157,11 +150,87 @@ cd ansible && bash -c 'TAKELAGE_PROJECT_ENV=prod TAKELAGE_PROJECT_BASE_IMAGE=tak
 
 # Usage rake image
 
-Another rake namespace which is almost always present is `rake image`.
+Another rake namespace which is almost always present is `rake image`:
 
+```bash
+$ rake
+...
+rake image:docker:takelbase:base:debian10                      # Build takelbase base image with packer
+rake image:docker:takelbase:project:prod:from_base             # Build takelbase project image with packer
+...
+```
+
+In this case, we have two different tasks:
+
+`rake image:docker:takelbase:base:debian10`
+will build a takelbase debian 10 docker base image with packer.
+
+`rake image:docker:takelbase:project:prod:from_base`
+will build a docker image of our project with packer.
 
 <a name="project"/>
 
 # Usage rake project
 
+The modular structure of takelage's Rakefiles make it possible
+to build a custom interface to each project with reusable
+bit components. 
 
+But some tasks differ from project to project.
+For example, the task `rake project:prod` should trigger the
+whole build queue of each project 
+which is different for each project.
+
+So the file `rake project/Rakefile` is no bit component.
+It consists of meta tasks which do not add code by itself
+but call dependent rake tasks to fulfill whatever necessary.
+
+Here is an example
+[Rakefile](https://github.com/geospin-takelage/takelage-cli/blob/master/rake/project/Rakefile)
+of the takelage cli:
+
+```ruby
+# frozen_string_literal: true
+
+namespace :project do
+  desc 'Build takelage cli ruby gem'
+  task prod: %w[gem:signin
+                rubylint
+                test
+                features
+                doc:clean
+                doc:build
+                doc:commit
+                gem:clean
+                gem:build
+                gem:move
+                git:tag
+                gem:push]
+end
+```
+
+Remember that you can display all tasks with their dependencies:
+
+```bash
+$ rake -P
+...
+rake project:prod
+    gem:signin
+    rubylint
+    test
+    features
+    doc:clean
+    doc:build
+    doc:commit
+    gem:clean
+    gem:build
+    gem:move
+    git:tag
+    gem:push
+...
+```
+
+By runnint `rake project:prod` you will in fact run all
+the different tasks listed above. 
+If one of the dependent tasks fails
+the whole composite command will fail.

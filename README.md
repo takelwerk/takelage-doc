@@ -12,10 +12,13 @@ build, test and deploy os images.
 - [Introduction](doc/general/introduction.md)
 - [Nomenclature](doc/general/nomenclature.md)
 
+### tau
+
+- [tau docker](doc/tools/tau_docker.md)
+- [tau bit](doc/tools/tau_bit.md)
+
 ### Tools
 
-- [bit](doc/tools/bit.md)
-- [docker](doc/tools/docker.md)
 - [gopass](doc/tools/gopass.md)
 
 ## Framework

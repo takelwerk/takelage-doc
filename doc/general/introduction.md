@@ -30,7 +30,7 @@ Docker containers are spawned from docker images and the
 most common way to build docker images are
 [Dockerfiles](https://docs.docker.com/engine/reference/builder/).
 Dockerfiles are written in a domain-specific language that uses 
-standard bash commands as its core. 
+standard bash commands at its core. 
 As one-container-one-process is a recommended design pattern
 for dockerized applications it makes sense to create really simple 
 Dockerfiles. So what‘s wrong with Dockerfiles?

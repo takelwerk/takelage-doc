@@ -20,17 +20,23 @@
 ## rake Task Management Tool
 
 [rake](https://github.com/ruby/rake) is ruby's make.
+rake is a domain specific language (DSL)
+so you have the full power of ruby available.
+
 In takelage it is used as a command wrapper.
-While the 
-[tau](https://github.com/geospin-takelage/takelage-cli) 
-handles global not project specific tasks
-like “log in to the development environment”
-or “download updates of bit components”
+Nothing fancy, only a wrapper.
+Rakefiles should be short and easy to read.
 rake handles project specific tasks like
 “test the build” or “tag the image”.
 
+So while rake is project specific
+[tau](https://github.com/geospin-takelage/takelage-cli) 
+handles global tasks like 
+“log in to the development environment”
+or “download updates of bit components”.
+
 rake tasks reside in Rakefiles in directories
-below a rake directory in the project root directory.
+below the project root's rake directory.
 The directory nesting is echoed in namespaces
 which create a command hierarchy.
 
@@ -57,6 +63,7 @@ rake
 
 Let's have a look at two examples.
 We start with a rake shortcut for a call of
+the ruby linter
 [rubocop](https://github.com/rubocop-hq/rubocop)
 with some custom options. 
 
@@ -74,15 +81,17 @@ task :rubylint do
 end
 ```
 
-This Rakefile (in combination with the 
-[rake meta bit component](https://github.com/geospin-takelage/takelage-dev/blob/master/rake/meta/Rakefile))
+This Rakefile in combination with the 
+[rake meta bit component](https://github.com/geospin-takelage/takelage-dev/blob/master/rake/meta/Rakefile)
+and the 
+[project root Rakefile](https://github.com/geospin-takelage/takelage-dev/blob/master/Rakefile)
 gives us a rake shortcut:
 
 ```bash
 rake rubylint
 ```
 
-A lightly more complex example is a 
+A slightly more complex example is a 
 rake shortcut to create a git tag
 with the project version 
 if such a tag does not exist yet 
@@ -117,6 +126,19 @@ This Rakefile gives us a rake shortcut:
 ```bash
 rake git:tag
 ```
+
+The `@project` ruby instance variable is set in the 
+[meta Rakefile](https://github.com/geospin-takelage/takelage-dev/blob/master/rake/meta/Rakefile):
+
+```ruby
+@project = YAML.safe_load `tau project` 
+```
+
+Here we inject the YAML output of `tau project` into
+our rake files. You can use 
+[gopass](tools/gopass.md#mallet)
+to inject secrets into `tau project` and 
+this way into your rake files.
 
 <a name="ansible"/>
 
@@ -160,7 +182,8 @@ rake image:docker:takelbase:project:prod:from_base             # Build takelbase
 ...
 ```
 
-In this case, we have two different tasks:
+These are two powerful tasks as they control 
+[packer](../tools/packer.md):
 
 `rake image:docker:takelbase:base:debian10`
 will build a takelbase debian 10 docker base image with packer.

@@ -66,7 +66,7 @@ are not needed in daily usage in our case.
 
 For these reasons,
 [takelage-cli](https://github.com/geospin-takelage/takelage-cli)
-chains certain bit commands and wraps.
+chains and wraps certain bit commands.
 This way, `tau` provides a high-level cli to bit
 without reengineering bit's features.
 See the 

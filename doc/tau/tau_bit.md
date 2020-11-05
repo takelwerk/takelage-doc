@@ -45,8 +45,7 @@ For open source projects you may use
 [bit.dev](https://bit.dev)
 as your central bit storage.
 For software testing or private use you may use a 
-[bitboard server](https://github.com/geospin-takelage/takelage-bit)
-created with this project.
+[bitboard server](https://github.com/geospin-takelage/takelage-bit).
 
 Both bit and git are in their core free and open source tools.
 Around these tools both free and non-free infrastructure has emerged.

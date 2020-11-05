@@ -81,7 +81,7 @@ bit is a stateful tool.
 This means, that there is a single global resource
 which records the state of a project.
 This resource file `bit.json` is shared via git.
-This means, you must only use bit in the 
+As a consequence, you must only use bit in the 
 master branch of git.
 `tau bit clipboard` will complain 
 if you are on any other branch.

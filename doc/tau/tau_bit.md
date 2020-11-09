@@ -45,8 +45,7 @@ For open source projects you may use
 [bit.dev](https://bit.dev)
 as your central bit storage.
 For software testing or private use you may use a 
-[bitboard server](https://github.com/geospin-takelage/takelage-bit)
-created with this project.
+[bitboard server](https://github.com/geospin-takelage/takelage-bit).
 
 Both bit and git are in their core free and open source tools.
 Around these tools both free and non-free infrastructure has emerged.
@@ -67,7 +66,7 @@ are not needed in daily usage in our case.
 
 For these reasons,
 [takelage-cli](https://github.com/geospin-takelage/takelage-cli)
-chains certain bit commands and wraps.
+chains and wraps certain bit commands.
 This way, `tau` provides a high-level cli to bit
 without reengineering bit's features.
 See the 
@@ -82,7 +81,7 @@ bit is a stateful tool.
 This means, that there is a single global resource
 which records the state of a project.
 This resource file `bit.json` is shared via git.
-This means, you must only use bit in the 
+As a consequence, you must only use bit in the 
 master branch of git.
 `tau bit clipboard` will complain 
 if you are on any other branch.

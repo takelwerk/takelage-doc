@@ -46,7 +46,7 @@ and is also part of the takelage docker image.
 
 `tau login` which is an alias for `tau docker container login`
 creates a docker container from the takelage docker image
-specific for the current working directory on the host
+specific to the current working directory on the host
 if no such container exists yet.
 If a takelage docker container for the current working directory
 already exists then `tau login` will log in to that container.

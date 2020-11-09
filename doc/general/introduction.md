@@ -5,7 +5,7 @@
 ## takelage DevOps Workflow
 
 The 
-[takelage devops workflow](../workflow.md) uses
+[takelage devops workflow](../general/workflow.md) uses
 [packer](https://packer.io/docs/builders/index.html), 
 [ansible](https://docs.ansible.com/) and 
 [molecule](https://molecule.readthedocs.io/)

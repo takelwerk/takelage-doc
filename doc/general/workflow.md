@@ -4,7 +4,7 @@
 
 ## takelage DevOps Workflow
 
-The [takelage devops workflow](../introduction.md)
+The [takelage devops workflow](../general/introduction.md)
 generally consists of these steps:
 
 1. Build ansible roles and project with 

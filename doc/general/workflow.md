@@ -7,10 +7,9 @@
 The [takelage devops workflow](../general/introduction.md)
 generally consists of these steps:
 
-1. Build ansible roles and project with 
+1. Build and test ansible roles and project with 
 [molecule](../tools/molecule.md)
 1. Create image with 
 [packer](../tools/packer.md)
 1. Test image with molecule
 1. Deploy image
-

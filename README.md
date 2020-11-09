@@ -11,6 +11,7 @@ build, test and deploy os images.
 
 - [Introduction](doc/general/introduction.md)
 - [Nomenclature](doc/general/nomenclature.md)
+- [Workflow](doc/general/workflow.md)
 
 ### tau
 
@@ -20,6 +21,7 @@ build, test and deploy os images.
 ### Tools
 
 - [gopass](doc/tools/gopass.md)
+- [molecule](doc/tools/molecule.md)
 - [packer](doc/tools/packer.md)
 - [rake](doc/tools/rake.md)
 

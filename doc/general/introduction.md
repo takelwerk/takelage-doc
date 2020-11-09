@@ -2,9 +2,10 @@
 
 [Table of contents](../../README.md)
 
-## Takelage DevOps Workflow
+## takelage DevOps Workflow
 
-The takelage devops workflow uses
+The 
+[takelage devops workflow](../workflow.md) uses
 [packer](https://packer.io/docs/builders/index.html), 
 [ansible](https://docs.ansible.com/) and 
 [molecule](https://molecule.readthedocs.io/)

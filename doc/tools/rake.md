@@ -253,7 +253,7 @@ rake project:prod
 ...
 ```
 
-By runnint `rake project:prod` you will in fact run all
+By running `rake project:prod` you will in fact run all
 the subtasks listed above. 
 If one of the dependent tasks fails
 the whole composite command will fail.

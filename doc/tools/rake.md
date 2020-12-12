@@ -43,7 +43,7 @@ which create a command hierarchy.
 Lots of takelage Rakefiles are shared as 
 [bit](../tau/tau_bit.md)
 components. They can be added to a project
-if needed but no project needs all Rakefile.
+if needed but no project needs all Rakefiles.
 
 Some of takelage's Rakefiles are parametrized
 and outsource the heavy work to library files

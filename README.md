@@ -10,6 +10,7 @@ build, test and deploy os images.
 ### General
 
 - [Introduction](doc/general/introduction.md)
+- [Docker Workflow](doc/general/docker_workflow.md)
 - [Nomenclature](doc/general/nomenclature.md)
 
 ### tau

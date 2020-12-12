@@ -264,5 +264,5 @@ inside the docker container.
 
 This way, changes to gopass inside of the container 
 will result in changes outside of the container.
-This also means you have to restart all running containers after
+This also means you have to restart all running takelage containers after
 making changes to the gopass configuration.

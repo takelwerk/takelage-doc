@@ -136,7 +136,7 @@ The `@project` ruby instance variable is set in the
 
 Here we inject the YAML output of `tau project` into
 our rake files. You can use 
-[gopass](tools/gopass.md#mallet)
+[gopass](../tools/gopass.md#mallet)
 to inject secrets into `tau project` and 
 this way into your rake files.
 

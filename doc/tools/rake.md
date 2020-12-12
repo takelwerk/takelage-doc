@@ -153,7 +153,7 @@ rake ansible:docker:takelbase:project:prod:from_base:converge
 ```
 
 This task will run `molecule converge` on the
-production environment building on the 
+production environment using the 
 [takelbase](https://hub.docker.com/r/takelage/takelbase)
 docker base image.
 

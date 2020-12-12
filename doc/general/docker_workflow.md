@@ -6,7 +6,7 @@
 
 takelage helps developing, producing and testing docker images.
 
-# develop
+### develop
 
 To develop a docker image
 takelage will use molecule as local docker hypervisor.
@@ -20,7 +20,7 @@ A standard work pattern is this:
 1. molecule provisions the docker container by running ansible scripts.
 1. molecule verifies the container by running pytest scripts.
 
-# produce and test
+### produce and test
 
 To produce and test a docker image
 takelage will first use packer and then molecule.
@@ -35,7 +35,7 @@ A standard work pattern is this:
 1. molecule creates a docker container from that docker base image.
 1. molecule verifies the docker container by running our pytest scripts.
 
-# Examples
+## Examples
 
 As the takelage docker workflow is based on
 ansible, pytest, molecule and packer which

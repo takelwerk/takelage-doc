@@ -82,9 +82,12 @@ This means, that there is a single global resource
 which records the state of a project.
 This resource file `bit.json` is shared via git.
 As a consequence, you must only use bit in the 
-master branch of git.
+main branch of git.
 `tau bit clipboard` will complain 
 if you are on any other branch.
+You can tell `tau` which branch is the 
+main git branch by setting
+`git_main_branch: main` to a different value.
 
 <a name="definitions"/>
 

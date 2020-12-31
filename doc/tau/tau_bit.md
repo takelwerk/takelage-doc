@@ -59,7 +59,7 @@ bit.dev's intended audience is the javascript community and
 they also host the best resources for bit: 
 the [bit docs](https://docs.bit.dev/).
 
-As we want to use to share general components
+As we want to use bit to share general components
 we have to switch off the javascript part.
 Futhermore, most fine-grained bit operations 
 are not needed in daily usage in our case.

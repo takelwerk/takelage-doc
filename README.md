@@ -16,7 +16,7 @@ build, test and deploy os images.
 ### Getting started
 
 - [Command Line Interface](doc/getting_started/prerequisites.md)
-- [Configuration](doc/getting_started/configuration.md))
+- [Configuration](doc/getting_started/configuration.md)
 
 ### tau
 

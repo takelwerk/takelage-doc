@@ -1,4 +1,4 @@
-# takelage-doc: nomenclature
+# takelage-doc: general/nomenclature
 
 [Table of contents](../../README.md)
 

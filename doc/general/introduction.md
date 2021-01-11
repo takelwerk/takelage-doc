@@ -1,4 +1,4 @@
-# takelage-doc: introduction
+# takelage-doc: general/introduction
 
 [Table of contents](../../README.md)
 

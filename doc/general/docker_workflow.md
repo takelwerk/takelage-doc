@@ -1,4 +1,4 @@
-# takelage-doc: docker_workflow
+# takelage-doc: general/docker_workflow
 
 [Table of contents](../../README.md)
 

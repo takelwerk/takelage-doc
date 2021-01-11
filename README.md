@@ -13,10 +13,15 @@ build, test and deploy os images.
 - [Docker Workflow](doc/general/docker_workflow.md)
 - [Nomenclature](doc/general/nomenclature.md)
 
+### Getting started
+
+- [Command Line Interface](doc/getting_started/prerequisites.md)
+- [Configuration](doc/getting_started/configuration.md))
+
 ### tau
 
-- [tau docker](doc/tau/tau_docker.md)
-- [tau bit](doc/tau/tau_bit.md)
+- [tau docker](doc/tau/docker.md)
+- [tau bit](doc/tau/bit.md)
 
 ### Tools
 

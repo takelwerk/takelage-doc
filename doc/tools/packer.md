@@ -1,4 +1,4 @@
-# takelage-doc: packer
+# takelage-doc: tools/packer
 
 [Table of contents](../../README.md)
 

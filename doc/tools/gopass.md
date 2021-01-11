@@ -1,4 +1,4 @@
-# takelage-doc: gopass
+# takelage-doc: tools/gopass
 
 [Table of contents](../../README.md)
 

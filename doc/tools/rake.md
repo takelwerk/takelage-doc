@@ -1,4 +1,4 @@
-# takelage-doc: rake
+# takelage-doc: tools/rake
 
 [Table of contents](../../README.md)
 

@@ -37,7 +37,11 @@ tau update
 **Warning: *tau update* will call *docker image prune* and remove all dangling images!**
 - Every project has its own local command line interface using the
   [rake](https://github.com/ruby/rake) build utility.
-  The available commands can be inspected by running
+  Install rake (as user) like so:
+```bash
+gem install rake
+```
+-  The available commands can be inspected by running
 ```bash
 rake
 ```

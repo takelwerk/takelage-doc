@@ -1,4 +1,4 @@
-[![license](https://img.shields.io/github/license/geospin-takelage/takelage-doc?color=blueviolet)](https://github.com/geospin-takelage/takelage-doc/blob/main/LICENSE)
+[![license](https://img.shields.io/github/license/geospin-takelage/takelage-doc?label=License&color=blueviolet)](https://github.com/geospin-takelage/takelage-doc/blob/main/LICENSE)
 
 # takelage-doc
 

@@ -61,7 +61,7 @@ and add your name and e-mail address to your git config:
 ```bash
 git config --global user.signingkey <key-id>
 git config --global user.name "my name"
-git congig --global user.email "myname@example.com"
+git config --global user.email "myname@example.com"
 ```
 
 Go into your project directory and run

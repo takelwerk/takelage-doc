@@ -1,3 +1,5 @@
+[![license](https://img.shields.io/github/license/geospin-takelage/takelage-doc?color=blueviolet)](https://github.com/geospin-takelage/takelage-doc/blob/main/LICENSE)
+
 # takelage-doc
 
 *takelage-doc* is the documentation project 

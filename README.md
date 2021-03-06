@@ -7,6 +7,30 @@ of the takelage devops workflow.
 The takelage devops workflow helps devops engineers
 build, test and deploy os images.
 
+## Table of Contents
+
+### General
+
+- [Introduction](doc/general/introduction.md)
+- [Docker Workflow](doc/general/docker_workflow.md)
+- [Nomenclature](doc/general/nomenclature.md)
+
+### Getting started
+
+- [Prerequisites](doc/getting_started/prerequisites.md)
+- [Configuration](doc/getting_started/configuration.md)
+
+### tau
+
+- [tau docker](doc/tau/docker.md)
+- [tau bit](doc/tau/bit.md)
+
+### Tools
+
+- [gopass](doc/tools/gopass.md)
+- [packer](doc/tools/packer.md)
+- [rake](doc/tools/rake.md)
+
 ## Framework Versions
 
 | App | Artifact |
@@ -31,27 +55,3 @@ build, test and deploy os images.
 | *[takelage-img-takelslim](https://github.com/geospin-takelage/takelage-img-takelslim)* | [![deploy project](https://img.shields.io/github/workflow/status/geospin-takelage/takelage-img-takelslim/Build%20and%20deploy%20takelslim?label=deploy%20project)](https://github.com/geospin-takelage/takelage-img-takelslim/actions/workflows/build_deploy_takelslim_nightly.yml) |
 | *[takelage-img-takelbase](https://github.com/geospin-takelage/takelage-img-takelbase)* | [![deploy project](https://img.shields.io/github/workflow/status/geospin-takelage/takelage-img-takelbase/Build%20and%20deploy%20takelbase?label=deploy%20project)](https://github.com/geospin-takelage/takelage-img-takelbase/actions/workflows/build_deploy_takelbase_nightly.yml) |
 | *[takelage-img-multipostgres](https://github.com/geospin-takelage/takelage-img-multipostgres)* | [![deploy project](https://img.shields.io/github/workflow/status/geospin-takelage/takelage-img-multipostgres/Build%20and%20deploy%20multipostgres?label=deploy%20project)](https://github.com/geospin-takelage/takelage-img-multipostgres/actions/workflows/build_deploy_multipostgres_nightly.yml) |
-
-## Table of Contents
-
-### General
-
-- [Introduction](doc/general/introduction.md)
-- [Docker Workflow](doc/general/docker_workflow.md)
-- [Nomenclature](doc/general/nomenclature.md)
-
-### Getting started
-
-- [Prerequisites](doc/getting_started/prerequisites.md)
-- [Configuration](doc/getting_started/configuration.md)
-
-### tau
-
-- [tau docker](doc/tau/docker.md)
-- [tau bit](doc/tau/bit.md)
-
-### Tools
-
-- [gopass](doc/tools/gopass.md)
-- [packer](doc/tools/packer.md)
-- [rake](doc/tools/rake.md)

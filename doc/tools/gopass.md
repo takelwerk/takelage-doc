@@ -240,6 +240,8 @@ Then you can access it in your ansible like so:
 my_var: "{{ project['my_secret_var'] }}"
 ```
 
+Only because you *can* do this
+does not mean you *should* do so.
 Use this feature scarcely and wisely!
 
 <a name="integration"/>

@@ -18,7 +18,8 @@ A standard work pattern is this:
 
 1. molecule creates a docker container from a docker base image.
 1. molecule provisions the docker container by running ansible scripts.
-1. molecule verifies the container by running pytest scripts.
+1. molecule verifies the container by running pytest scripts
+   which have access to the ansible variables.
 
 ### produce and test
 
@@ -31,9 +32,10 @@ checking that a docker container based on that image works as expected.
 A standard work pattern is this:
 
 1. packer creates a docker image 
-   by provisioning a docker base image with our ansible scripts.
+   by provisioning a docker base image with ansible scripts.
 1. molecule creates a docker container from that docker base image.
-1. molecule verifies the docker container by running our pytest scripts.
+1. molecule verifies the docker container by running pytest scripts 
+   which have access to the ansible variables.
 
 ## Examples
 

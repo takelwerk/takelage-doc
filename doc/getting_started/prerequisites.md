@@ -13,6 +13,7 @@ On your host system install these prerequisites:
 - [gnupg](https://gnupg.org/)
 - [git](https://git-scm.com)
 - [gopass](https://www.gopass.pw)
+- [mutagen](https://mutagen.io/)
 
 For the global takelage `tau` command line interface you'll need `ruby`.
 You may use your system ruby but it is recommended to install it as user:

@@ -9,7 +9,6 @@ On your host system install these prerequisites:
   If you use linux be sure to follow the
   [postinstall](https://docs.docker.com/engine/install/linux-postinstall/)
   guide
-- [socat](http://www.dest-unreach.org/socat/)
 - [gnupg](https://gnupg.org/)
 - [git](https://git-scm.com)
 - [gopass](https://www.gopass.pw)

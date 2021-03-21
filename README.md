@@ -53,5 +53,6 @@ build, test and deploy os images.
 ### Tools
 
 - [gopass](doc/tools/gopass.md)
+- [mutagen](doc/tools/mutagen.md)
 - [packer](doc/tools/packer.md)
 - [rake](doc/tools/rake.md)

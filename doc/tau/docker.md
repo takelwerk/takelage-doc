@@ -75,7 +75,7 @@ from within a takelage container (“matryoshka test”).
 
 `tau prune` which is an alias for `tau docker container prune`
 will remove those takelage containers 
-(and the corresponding docker networks)
+(and the corresponding docker networks and mutagen forwards)
 which have no active shell.
 
 ```bash
@@ -91,7 +91,7 @@ as you have an active login shell in that container.
 
 `tau clean` which is an alias for `tau docker container clean`
 will remove all takelage containers
-(and the corresponding docker networks).
+(and the corresponding docker networks and mutagen forwards).
 
 ```bash
 tau clean

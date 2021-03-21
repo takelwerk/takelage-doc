@@ -4,6 +4,10 @@
 
 ## Getting Started: prerequisites
 
+You can consider this 
+[github actions workflow](https://github.com/geospin-takelage/takelage-dev/blob/main/.github/workflows/build_test_project_nightly.yml)
+as an example on how to install takelage on ubuntu.
+
 On your host system install these prerequisites:
 - [docker](https://docs.docker.com/get-docker/)
   If you use linux be sure to follow the

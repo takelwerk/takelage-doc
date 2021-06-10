@@ -42,7 +42,7 @@ build, test and deploy os images.
 
 - [Prerequisites](doc/getting_started/prerequisites.md)
 - [Configuration](doc/getting_started/configuration.md)
-- [Hello World!](doc/getting_started/helloworld.md)
+- [Hello world!](doc/getting_started/helloworld.md)
 
 ### tau
 

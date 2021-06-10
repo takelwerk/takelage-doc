@@ -17,7 +17,7 @@ You are warmly greeted with some error messages:
 ```
 [ERROR] Cannot determine project root directory
 [INFO] Is there a Rakefile in the project root directory?
-takelage: 0.40.0 | tau: 0.32.0 | git: no | gopass: ok | gpg: ok | mutagen: ok | ssh: ok
+takelage: 0.41.0 | tau: 0.32.0 | git: no | gopass: ok | gpg: ok | mutagen: ok | ssh: ok
 ```
 
 Let's go through it one by one:

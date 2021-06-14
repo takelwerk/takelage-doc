@@ -25,7 +25,7 @@ tau complains that it cannot determine the root directory of the project. It gue
 
 Then you see the name of the docker image which is the base for the container you have just started (usually: `takelage`) and the version number. This is very important because the main idea of takelage is to have access to a versioned development and build environment. Of course, a version of tau is available in the container as well.
 
-Then it says `git: no` which is expected as well. Again, we have not yet created the project so of course, a git repository does not exist yet.
+Then it says `git: no` which is expected as well. Again, we have not yet created the project so of course, a git repository does not exist.
 
 At this point you might ask: Why don't we run the tau command "create a minimal project" outside of the container? If we entered the container afterwards these errors would be gone. That is true.
 

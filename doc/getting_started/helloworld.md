@@ -53,7 +53,7 @@ tau project
 
 Here you see your images. There is one image configured with the name "project". The "project" image is the default image which will also be used for development. It is based on `takelage/takelslim:latest` which is an official `debian:buster-slim` docker image which has been fully upgraded and which has python3 installed to unleash the power of ansible.
 
-On the same level where the base_user and base_repo are defined you can add a new line where you set a command: echo "Hello world!" This command will be executed when you run a docker container based on the image we are going to build:
+On the same level where the `base_user` and `base_repo` are defined you can add a new line where you set a `command: echo "Hello world!"` This command will be executed when you run a docker container based on the image we are going to build:
 
 ```
      omit_pipeline_name: prod

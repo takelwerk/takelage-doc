@@ -58,7 +58,7 @@ On the same level where the `base_user` and `base_repo` are defined you can add 
 ```
      omit_pipeline_name: prod
      target_user: takelage
-     target_repo: init
+     target_repo: helloworld
 +    command: echo "Hello world!"
 ```
 

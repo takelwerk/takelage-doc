@@ -27,9 +27,11 @@ Then you see the name of the docker image which is the base for the container yo
 
 Then it says `git: no` which is expected as well. Again, we have not yet created the project so of course, a git repository does not exist yet.
 
-At this point you might ask: Why don't we run the "create a minimal project" tau command outside of the container? If we enter the container afterwards these errors were gone. That is true. But if you run the next command outside of the container then _maybe_ it will work on your machine. It definitely works on my machine. If you run the next command in the takelage shell then it works on your machine.
+At this point you might ask: Why don't we run the "create a minimal project" tau command outside of the container? If we entered the container afterwards these errors would be gone. That is true.
 
-Now create a new takelage packer project for docker images with the name "helloworld":
+Now, if you run the next command outside of the container then _maybe_ it will work on your machine. It works on my machine. But if you run the next command in the takelage shell then it works on your machine.
+
+Let's create a new takelage packer project for docker images with the name "helloworld":
 
 ```bash
 tau init packer docker helloworld

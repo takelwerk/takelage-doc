@@ -12,7 +12,7 @@ cd takelage-helloworld
 tau login
 ```
 
-You are warmly greeted with some error messages:
+You are warmly greeted with an error message by `tau status`:
 
 ```
 [ERROR] Cannot determine project root directory

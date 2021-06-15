@@ -16,8 +16,8 @@ You are warmly greeted with an error message by `tau status`:
 
 ```
 [ERROR] Cannot determine project root directory
-[INFO] Is there a Rakefile in the project root directory?
-takelage: 0.41.0 | tau: 0.32.0 | git: no | gopass: ok | gpg: ok | mutagen: ok | ssh: ok
+[WARN] Is there a Rakefile in the project root directory?
+takelage: 0.42.1 | tau: 0.33.1 | git: no | gopass: ok | gpg: ok | mutagen: ok | ssh: ok
 ```
 
 Let's go through it one by one:

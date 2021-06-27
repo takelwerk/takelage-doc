@@ -6,7 +6,7 @@
 
 ### Outline
 1) Answers: What is takelage?
-2) Example: Build a docker image with packer and ansible and test a docker container with pytest
+2) Example: Build a docker image with packer and ansible
 3) Example: Minimal takelage project with rake subsystem
 
 ### Prerequisites:
@@ -22,7 +22,7 @@ A unified environment solves the „it works on my machine `¯\_(ツ)_/¯`“ pr
 
 One other common pitfall for most projects is the „outdated README“ problem. Especially commands which are noted in README files are likely to change over time. Sadly, the necessary changes in the documentation tend to be forgotten. If you copy outdated commands from a README they may work. But they may also wreck havoc. This is why takelage suggests to put shell commands in Rakefiles which can be then executed by calling a rake command with a descriptive name and a description. These rake tasks will be executed frequently by your colleagues and pipelines so it is far more likely that mistakes will be found.
 
-### 2) Example: Build a docker image with packer and ansible and test a docker container with pytest
+### 2) Example: Build a docker image with packer and ansible
 
 See [Hello world!](helloworld.md) example.
 

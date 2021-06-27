@@ -25,7 +25,7 @@ so you have the full power of ruby available.
 
 In takelage it is used as a command wrapper.
 Nothing fancy, only a wrapper.
-Rakefiles should be short and easy to read.
+Most Rakefiles should be short and easy to read.
 rake handles project specific tasks like
 “test the build” or “tag the image”.
 
@@ -45,17 +45,18 @@ Lots of takelage Rakefiles are shared as
 components. They can be added to a project
 if needed but no project needs all Rakefiles.
 
-Some of takelage's Rakefiles are parametrized
-and outsource the heavy work to library files
-which are plain ruby files that can be found 
-in lib directories.
-
 In takelage, `rake` is a shortcut for `rake -T` which
 shows all currently available rake tasks:
 
 ```
 rake
 ```
+
+(If you want to hide rake tasks to provide a better overview
+you can use the `subtasks` closure and the `take` command 
+which is an alias for `rake overview=true`.
+An example is the 
+[takelscripts Rakefile](https://github.com/geospin-takelage/takelage-dev/blob/main/rake/takelscripts/Rakefile).)
 
 <a name="example"/>
 

@@ -56,7 +56,8 @@ rake
 you can use the `subtasks` closure and the `take` command 
 which is an alias for `rake overview=true`.
 An example is the 
-[takelscripts Rakefile](https://github.com/geospin-takelage/takelage-dev/blob/main/rake/takelscripts/Rakefile).)
+[takelscripts](https://github.com/geospin-takelage/takelage-dev/blob/main/rake/takelscripts/Rakefile)
+Rakefile.)
 
 <a name="example"/>
 

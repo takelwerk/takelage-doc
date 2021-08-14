@@ -45,7 +45,7 @@ For open source projects you may use
 [bit.dev](https://bit.dev)
 as your central bit storage.
 For software testing or private use you may use a 
-[bitboard server](https://github.com/geospin-takelage/takelage-bit).
+[bitboard server](https://github.com/takelwerk/takelage-bit).
 
 Both bit and git are in their core free and open source tools.
 Around these tools both free and non-free infrastructure has emerged.
@@ -65,12 +65,12 @@ Futhermore, most fine-grained bit operations
 are not needed in daily usage in our case.
 
 For these reasons,
-[takelage-cli](https://github.com/geospin-takelage/takelage-cli)
+[takelage-cli](https://github.com/takelwerk/takelage-cli)
 chains and wraps certain bit commands.
 This way, `tau` provides a high-level cli to bit
 without reengineering bit's features.
 See the 
-[cucumber features](https://github.com/geospin-takelage/takelage-cli#commands)
+[cucumber features](https://github.com/takelwerk/takelage-cli#commands)
 for a more technical but living documentation.
 
 <a name="warning"/>
@@ -170,7 +170,7 @@ In the latter case the scope is called a remote scope.
 “Built-in” remote scopes are those on
 [bit.dev](https://bit.dev/).
 Custom remote scopes are located on a 
-[custom bit server](https://github.com/geospin-takelage/takelage-bit)
+[custom bit server](https://github.com/takelwerk/takelage-bit)
 and have to be added to a local bit workspace
 before they can be used.
 

@@ -213,7 +213,7 @@ The `project.yml` is interpreted as an
 [eRuby](https://en.wikipedia.org/wiki/ERuby) ERB file
 so you have the full power of ruby at your disposal.
 You may use it for example to 
-[call gopass](https://github.com/geospin-takelage/takelage-cli/blob/master/features/cucumber/features/info/info.project.pass.feature)
+[call gopass](https://github.com/takelwerk/takelage-cli/blob/master/features/cucumber/features/info/info.project.pass.feature)
 to inject secrets into every part of takelage.
 Just call `tau project` to get a resolved YAML file.
 
@@ -249,12 +249,12 @@ Use this feature scarcely and wisely!
 # Integration
 
 gopass is integrated into
-[takelage-dev](https://github.com/geospin-takelage/takelage-dev)
+[takelage-dev](https://github.com/takelwerk/takelage-dev)
 through the
-[takelscripts](https://github.com/geospin-takelage/takelage-dev/tree/master/ansible/roles/takel-takelage/files/takelscripts).
+[takelscripts](https://github.com/takelwerk/takelage-dev/tree/master/ansible/roles/takel-takelage/files/takelscripts).
 
 The function
-[Entrypoint::add_gopass](https://github.com/geospin-takelage/takelage-dev/blob/48d05bd5ca3c300c45739083685306a5a0e5d462/ansible/roles/takel-takelage/files/takelscripts/entrypoint.py#L150)
+[Entrypoint::add_gopass](https://github.com/takelwerk/takelage-dev/blob/48d05bd5ca3c300c45739083685306a5a0e5d462/ansible/roles/takel-takelage/files/takelscripts/entrypoint.py#L150)
 assumes that the gopass config is located at 
 *~/.config/gopass/config.yml* which was not always
 the case in older gopass versions.

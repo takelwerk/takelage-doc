@@ -30,7 +30,7 @@ rake handles project specific tasks like
 “test the build” or “tag the image”.
 
 So while rake is project specific
-[tau](https://github.com/geospin-takelage/takelage-cli) 
+[tau](https://github.com/takelwerk/takelage-cli) 
 handles global tasks like 
 “log in to the development environment”
 or “download updates of bit components”.
@@ -56,7 +56,7 @@ rake
 you can use the `subtasks` closure and the `take` command 
 which is an alias for `rake overview=true`.
 An example is the 
-[takelscripts](https://github.com/geospin-takelage/takelage-dev/blob/main/rake/takelscripts/Rakefile)
+[takelscripts](https://github.com/takelwerk/takelage-dev/blob/main/rake/takelscripts/Rakefile)
 Rakefile.)
 
 <a name="example"/>
@@ -84,9 +84,9 @@ end
 ```
 
 This Rakefile in combination with the 
-[rake meta bit component](https://github.com/geospin-takelage/takelage-dev/blob/master/rake/meta/Rakefile)
+[rake meta bit component](https://github.com/takelwerk/takelage-dev/blob/master/rake/meta/Rakefile)
 and the 
-[project root Rakefile](https://github.com/geospin-takelage/takelage-dev/blob/master/Rakefile)
+[project root Rakefile](https://github.com/takelwerk/takelage-dev/blob/master/Rakefile)
 gives us a rake shortcut:
 
 ```bash
@@ -130,7 +130,7 @@ rake git:tag
 ```
 
 The `@project` ruby instance variable is set in the 
-[meta Rakefile](https://github.com/geospin-takelage/takelage-dev/blob/master/rake/meta/Rakefile):
+[meta Rakefile](https://github.com/takelwerk/takelage-dev/blob/master/rake/meta/Rakefile):
 
 ```ruby
 @project = YAML.safe_load `tau project` 
@@ -211,7 +211,7 @@ It consists of meta tasks which do not add code by itself
 but call dependent rake tasks to fulfill whatever necessary.
 
 Here is an example
-[Rakefile](https://github.com/geospin-takelage/takelage-cli/blob/master/rake/project/Rakefile)
+[Rakefile](https://github.com/takelwerk/takelage-cli/blob/master/rake/project/Rakefile)
 of the takelage cli:
 
 ```ruby

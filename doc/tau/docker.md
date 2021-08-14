@@ -29,7 +29,7 @@ This guide focuses on the takelage docker image
 and the takelage docker containers created with `tau`.
 
 `tau` is the 
-[takelage cli](https://github.com/geospin-takelage/takelage-cli)
+[takelage cli](https://github.com/takelwerk/takelage-cli)
 which is distributed as a 
 [ruby gem](https://rubygems.org/gems/takelage).
 The command line interface should be installed on the

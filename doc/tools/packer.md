@@ -25,7 +25,7 @@ takelage uses
 complex packer commands.
 
 At the time of writing in late 2020
-packer is still mostly configured by [JSON template](https://github.com/geospin-takelage/takelage-dev/blob/master/packer/templates/docker/takelbase/project/build_from_base.json)
+packer is still mostly configured by [JSON template](https://github.com/takelwerk/takelage-dev/blob/master/packer/templates/docker/takelbase/project/build_from_base.json)
 files.
 But starting from version 
 [1.5.0](https://www.hashicorp.com/blog/announcing-hashicorp-packer-1-5-with-hcl2-support)

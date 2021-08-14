@@ -37,7 +37,7 @@ But `docker` is a special case as `takelage` is itself
 a `docker` container. It is easy to mount 
 the docker socket file as a volume inside the 
 container (see 
-[`cmd_docker_container_create](https://github.com/geospin-takelage/takelage-cli/blob/main/lib/takelage/default.yml)).
+[`cmd_docker_container_create](https://github.com/takelwerk/takelage-cli/blob/main/lib/takelage/default.yml)).
 Unfortunately, due to limits of the docker
 implementation mounting socket files of other
 programs does not yield satisfactory results.

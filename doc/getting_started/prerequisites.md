@@ -5,7 +5,7 @@
 ## Getting Started: prerequisites
 
 You can consider this 
-[github actions workflow](https://github.com/geospin-takelage/takelage-dev/blob/main/.github/workflows/build_test_project_nightly.yml)
+[github actions workflow](https://github.com/takelwerk/takelage-dev/blob/main/.github/workflows/build_test_project_nightly.yml)
 as an example on how to install takelage on ubuntu.
 
 On your host system install these prerequisites:
@@ -24,7 +24,7 @@ You may use your system ruby but it is recommended to install it as user:
 ```bash
 \curl -sSL https://get.rvm.io | bash -s stable --ruby
 ```
-- [tau via gem](https://github.com/geospin-takelage/takelage-cli) (as user):
+- [tau via gem](https://github.com/takelwerk/takelage-cli) (as user):
 ```bash
 gem install takelage
 ```

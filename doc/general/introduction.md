@@ -56,8 +56,8 @@ This is why we propose an alternative workflow to build docker images:
 - Use a molecule development environment.
 - Test the code with 
   [pytest](https://docs.pytest.org/en/latest/), 
-  [testinfra](https://testinfra.readthedocs.io/en/latest/) and 
-  [takeltest](https://github.com/geospin-takelage/takelage-var).
+  [pytest-testinfra](https://testinfra.readthedocs.io/en/latest/) and 
+  [pytest-takeltest](https://github.com/takelwerk/takelage-var).
 
 We know that this is an opinionated proposal.
 We release our software under the GPL so feel free

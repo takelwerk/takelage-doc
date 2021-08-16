@@ -33,7 +33,7 @@ gem install takelage
 source <(tau completion bash)
 ```
 - Use `tau` to get the latest
-  [takelage docker image](https://hub.docker.com/r/takelage/takelage)
+  [takelage docker image](https://hub.docker.com/r/takelwerk/takelage)
   from hub.docker.com:
 ```bash
 tau update

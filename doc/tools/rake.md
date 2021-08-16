@@ -156,7 +156,7 @@ rake ansible:docker:takelbase:project:prod:from_base:converge
 
 This task will run `molecule converge` on the
 production environment using the 
-[takelbase](https://hub.docker.com/r/takelage/takelbase)
+[takelbase](https://hub.docker.com/r/takelwerk/takelbase)
 docker base image.
 
 Similar tasks exist for every molecule command for the project
@@ -167,7 +167,7 @@ You can have a look what commands a task will run by appending `run=dry`:
 
 ```
 $ rake ansible:docker:takelbase:project:prod:from_base:converge run=dry
-cd ansible && bash -c 'TAKELAGE_PROJECT_ENV=prod TAKELAGE_PROJECT_BASE_IMAGE=takelage/takelbase TAKELAGE_PROJECT_NAME=takelage-dev TAKELAGE_MOLECULE_CONVERGE_PLAYBOOK=playbook-project-base.yml molecule converge --scenario-name default'
+cd ansible && bash -c 'TAKELAGE_PROJECT_BASE_IMAGE=takelwerk/takelbase TAKELAGE_PROJECT_NAME=takelage-dev TAKELAGE_MOLECULE_CONVERGE_PLAYBOOK=playbook-project-base.yml molecule converge --scenario-name default'
 ```
 
 <a name="image"/>

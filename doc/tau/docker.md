@@ -134,7 +134,7 @@ tau docker container daemon
 
 `tau update` which is an alias for `tau docker image update`
 will check for a new 
-[takelage docker image](https://hub.docker.com/r/takelage/takelage/tags)
+[takelage docker image](https://hub.docker.com/r/takelwerk/takelage/tags)
 on dockerhub.com and download it.
 
 ```bash

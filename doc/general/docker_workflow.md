@@ -48,7 +48,7 @@ Here are two examples which are quite different:
 The above outlined work patterns are used iteratively.
 We start with a base image, for example `debian/stable-slim`.
 Then we use the above outlined workflow to create a new base image,
-for example `takelage/takelbase` which has python and systemd installed.
+for example `takelwerk/takelbase` which has python and systemd installed.
 Then we use the same pattern to develop our project 
 based on that new base image.
 

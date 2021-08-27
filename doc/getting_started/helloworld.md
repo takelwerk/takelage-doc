@@ -56,7 +56,6 @@ Here you see your images. There is one image configured with the name "project".
 On the same level where the `base_user` and `base_repo` are defined you can add a new line where you set a `command: echo "Hello world!"` This command will be executed when you run a docker container based on the image we are going to build:
 
 ```
-     omit_pipeline_name: prod
      target_user: takelage
      target_repo: helloworld
 +    command: echo "Hello world!"
@@ -78,10 +77,10 @@ rake images:project:tasks
 Now the tasks related to images are "unfolded" and we see the command we are looking for:
 
 ```bash
-rake images:project:prod:build
+rake images:project:build
 ```
 
-You have built the docker image with packer and packer has comitted it as `packer_local/helloworld-project-prod:latest` to your local docker registry. Have a look:
+You have built the docker image with packer and packer has comitted it as `packer_local/helloworld-project:latest` to your local docker registry. Have a look:
 
 ```bash
 docker images
@@ -90,7 +89,7 @@ docker images
 Now run it:
 
 ```bash
-docker run -it packer_local/helloworld-project-prod
+docker run -it packer_local/helloworld-project
 ```
 
 You should be greeted with: "Hello world!"

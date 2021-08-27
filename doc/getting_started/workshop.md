@@ -20,7 +20,7 @@ takelage is a unified development and build environment. Mostly, you'll use the 
 
 A unified environment solves the „it works on my machine `¯\_(ツ)_/¯`“ problem: one developer builds something successfully on her machine but no one (or worse: nearly no one) else is able to reproduce it on their machine. More honestly, the problem should be called: „it does not work on your machine `¯\_(ツ)_/¯`“.
 
-One other common pitfall for most projects is the „outdated README“ problem. Especially commands which are noted in README files are likely to change over time. Sadly, the necessary changes in the documentation tend to be forgotten. If you copy outdated commands from a README they may work. But they may also wreck havoc. This is why takelage suggests to put shell commands in Rakefiles which can be then executed by calling a rake command with a descriptive name and a description. These rake tasks will be executed frequently by your colleagues and pipelines so it is far more likely that mistakes will be found.
+One other common pitfall for most projects is the „outdated README“ problem. Especially commands which are noted in README files are likely to change over time. Sadly, the necessary changes in the documentation tend to be forgotten. If you copy outdated commands from a README they may work. But they may also wreck havoc. This is why takelage suggests to put shell commands in Rakefiles which can then be executed by calling a rake command with a descriptive name and a description. These rake tasks will be executed frequently by your colleagues and pipelines so it is far more likely that mistakes will be found.
 
 ### 2) Example: Build a docker image with packer and ansible
 

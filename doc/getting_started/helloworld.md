@@ -56,7 +56,7 @@ Here you see your images. There is one image configured with the name "project".
 On the same level where the `base_user` and `base_repo` are defined you can add a new line where you set a `command: echo "Hello world!"` This command will be executed when you run a docker container based on the image we are going to build:
 
 ```
-     target_user: takelage
+     target_user: takelwerk
      target_repo: helloworld
 +    command: echo "Hello world!"
 ```

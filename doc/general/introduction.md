@@ -51,7 +51,7 @@ This is why we propose an alternative workflow to build docker images:
 - Build the images with packer.
 - Write the provisioning code in ansible.
 - Use ansible roles to reuse code and share them with 
-  [bit](https://bit.dev) between 
+  [hg](https://www.mercurial-scm.org) between 
   [git](https://git-scm.com) repositories.
 - Use a molecule development environment.
 - Test the code with 

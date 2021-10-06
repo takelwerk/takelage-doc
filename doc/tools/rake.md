@@ -33,7 +33,7 @@ So while rake is project specific
 [tau](https://github.com/takelwerk/takelage-cli) 
 handles global tasks like 
 “log in to the development environment”
-or “download updates of bit components”.
+or “download updates of hg repositories”.
 
 rake tasks reside in Rakefiles in directories
 below the project root's rake directory.
@@ -41,8 +41,8 @@ The directory nesting is echoed in namespaces
 which create a command hierarchy.
 
 Lots of takelage Rakefiles are shared as 
-[bit](../tau/tau_bit.md)
-components. They can be added to a project
+[hg](../tau/tau_hg.md)
+repositories. They can be added to a project
 if needed but no project needs all Rakefiles.
 
 In takelage, `rake` is a shortcut for `rake -T` which
@@ -84,7 +84,7 @@ end
 ```
 
 This Rakefile in combination with the 
-[rake meta bit component](https://github.com/takelwerk/takelage-dev/blob/master/rake/meta/Rakefile)
+[meta Rakefile](https://github.com/takelwerk/takelage-dev/blob/master/rake/meta/Rakefile)
 and the 
 [project root Rakefile](https://github.com/takelwerk/takelage-dev/blob/master/Rakefile)
 gives us a rake shortcut:
@@ -199,14 +199,14 @@ will build a docker image of our project with packer.
 
 The modular structure of takelage's Rakefiles make it possible
 to build a custom interface to each project with reusable
-bit components. 
+hg repositories. 
 
 But some tasks differ from project to project.
 For example, the task `rake project:prod` should trigger the
 whole build queue of each project 
 which is different for each project.
 
-So the file `rake project/Rakefile` is no bit component.
+So the file `rake project/Rakefile` is no hg repository.
 It consists of meta tasks which do not add code by itself
 but call dependent rake tasks to fulfill whatever necessary.
 

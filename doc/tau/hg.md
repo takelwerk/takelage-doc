@@ -34,7 +34,7 @@ which is an
 [open-source](https://github.com/teambit/bit)
 cli tool for collaborating on isolated components
 across projects and repositories 
-with a focus on JavaScript projects.
+with a focus on JavaScript code.
 Mercurial is faster and smaller than bit.
 Furthermore, it is a general purpose tool and 
 thus better suited for takelage. 

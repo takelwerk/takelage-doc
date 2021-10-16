@@ -19,43 +19,30 @@ The
 [takelage-vbox-takelbase](https://github.com/takelwerk/takelage-vbox-takelbase)
 project uses packer to install Debian headlessly using a preseed file.
 It then creates the
-[takelwerk/takelbase]()
+[takelwerk/takelbase](https://app.vagrantup.com/takelwerk/boxes/takelbase)
+vagrant base box.
 
+### takelage vagrant project
 
-### produce and test
+We use the takelbase box as base for takelage vagrant virtualbox projects.
+The virtual machine is started and provisioned by packer 
+using the same ansible scripts we use for docker. 
+Finally, a vm snapshot is saved as a vagrant box and uploaded 
+to HasiCorp's vagrantup.com server.
 
-To produce and test a docker image
-takelage will first use packer and then molecule.
-Producing a docker image means creating the production-ready docker image.
-Testing a docker image means 
-checking that a docker container based on that image works as expected.
+### Example
 
-A standard work pattern is this:
-
-1. packer creates a docker image 
-   by provisioning a docker base image with ansible scripts.
-1. molecule creates a docker container from that docker base image.
-1. molecule verifies the docker container by running pytest scripts 
-   which have access to the ansible variables.
-
-## Examples
-
-As the takelage docker workflow is based on
-ansible, pytest, molecule and packer which
-are very flexible tools the workflow itself
-becomes incredibly flexible, too.
-Here are two examples which are quite different:
-
-The above outlined work patterns are used iteratively.
-We start with a base image, for example `debian/stable-slim`.
-Then we use the above outlined workflow to create a new base image,
-for example `takelwerk/takelbase` which has python and systemd installed.
-Then we use the same pattern to develop our project 
-based on that new base image.
-
-We can use any kind of base image, for example the base image
-that Google provides for its 
-[App Engine](https://cloud.google.com/appengine/).
-We can provision Google's base image which is an ancient Ubuntu box
-with our ansible scripts and verify the result with our pytest scripts.
-Afterwards, we can run an app engine based on that new docker image.
+The 
+[takelage-pad](https://github.com/takelwerk/takelage-pad)
+project is an example for the takelage vbox workflow.
+We use 
+[takelwerk/takelpad](https://hub.docker.com/r/takelwerk/takelpad)
+to develop and test the project. We create the docker container on a
+[debian build server](https://github.com/takelwerk/takelage-pad/actions/workflows/build_test_deploy_project_on_push.yml)
+and upload the docker image to dockerhub.
+The
+[takelwerk/takelpad](https://app.vagrantup.com/takelwerk/boxes/takelpad)
+vagrant virtualbox machine image is then created
+on a 
+[macos build server](https://github.com/takelwerk/takelage-pad/actions/workflows/build_deploy_project_vbox_on_push.yml)
+and uploaded to vagrantup.

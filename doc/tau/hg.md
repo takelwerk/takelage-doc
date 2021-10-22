@@ -8,7 +8,7 @@
     - [History](#history)
     - [Warning](#warning)
 - [Usage tau hg](#hg)
-    - [tau hg export](#export)
+    - [tau hg list](#list)
     - [tau hg pull](#pull)
     - [tau hg push](#push)
 
@@ -63,16 +63,16 @@ but you can choose your favorite git hg branch by setting
 
 # Usage tau hg
 
-The `tau hg` subcommands are shortcuts for complicated
-bash commands which combine 
+The `tau hg` subcommands are shortcuts for some more or less
+complicated bash commands which combine 
 [`find`](https://www.gnu.org/software/findutils/manual/html_mono/find.html), 
-[`parallel`](https://www.gnu.org/software/parallel/)
-and `hg`.
+[`parallel`](https://www.gnu.org/software/parallel/) and 
+[`hg`](https://www.mercurial-scm.org/).
 
-<a name="export"/>
+<a name="list"/>
 
-## tau hg export: export mercuial repos
-`tau hg export` will find all Mercurial repositories
+## tau hg list: list mercuial repos
+`tau hg list` will find all Mercurial repositories
 below the project root folder and 
 print the `hg clone` commands which created them.
 

@@ -7,7 +7,7 @@
 - [Introduction](#introduction)
     - [History](#history)
     - [Warning](#warning)
-- [Usage tau hg](#hg)
+- [tau hg](#hg)
     - [tau hg list](#list)
     - [tau hg pull](#pull)
     - [tau hg push](#push)
@@ -61,7 +61,7 @@ but you can choose your favorite git hg branch by setting
 
 <a name="hg"/>
 
-# Usage tau hg
+# tau hg
 
 The `tau hg` subcommands are shortcuts for some more or less
 complicated bash commands which combine 
@@ -73,11 +73,15 @@ complicated bash commands which combine
 make a merge conflict less likely.
 `tau hg pull` and `tau hg push` will only work
 on the 
-['git_hg_branch'](https://github.com/takelwerk/takelage-cli/blob/main/lib/takeltau/default.yml)
+[git_hg_branch](https://github.com/takelwerk/takelage-cli/blob/main/lib/takeltau/default.yml)
 which defaults to `main`.
-It can be 
+This can be 
 [changed](https://github.com/takelwerk/takelage-cli#configuration-examples)
-to any other branch.
+generally or per project to any other branch.
+Then they check that there are no uncommited changes 
+and `git pull` the project so that you are in sync with upstream.
+After running the hg commands any changed `.hg` directories
+will be committed and a `git push` syncs upstream.
 
 <a name="list"/>
 

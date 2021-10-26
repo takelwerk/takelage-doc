@@ -80,15 +80,15 @@ This can be
 generally or per project to any other branch.
 Then they check that there are no uncommited changes 
 and `git pull` the project so that you are in sync with upstream.
-After running the hg commands any changed `.hg` directories
-will be committed and a `git push` syncs upstream.
+After running the hg commands any changed `.hg` directory
+will be committed to git and a `git push` syncs the upstream repository.
 
 <a name="list"/>
 
 ## tau hg list: list mercuial repos
 `tau hg list` will find all Mercurial repositories
 below the project root folder and 
-print the `hg clone` commands which created them.
+print the `hg clone` commands which create them.
 
 <a name="pull"/>
 

@@ -57,7 +57,7 @@ That's why tau defines a **git hg branch** through the
 git's `main` branch.
 `tau hg` will refuse to operate on any other branch
 but you can choose your favorite git hg branch by setting
-`git_hg_branch: main` to a different value.
+[`git_hg_branch: main` to a different value.
 
 <a name="hg"/>
 
@@ -68,6 +68,16 @@ complicated bash commands which combine
 [`find`](https://www.gnu.org/software/findutils/manual/html_mono/find.html), 
 [`parallel`](https://www.gnu.org/software/parallel/) and 
 [`hg`](https://www.mercurial-scm.org/).
+
+`tau hg` tries to keep in sync with upstream in order to
+make a merge conflict less likely.
+`tau hg pull` and `tau hg push` will only work
+on the 
+['git_hg_branch'](https://github.com/takelwerk/takelage-cli/blob/main/lib/takeltau/default.yml)
+which defaults to `main`.
+It can be 
+[changed](https://github.com/takelwerk/takelage-cli#configuration-examples)
+to any other branch.
 
 <a name="list"/>
 

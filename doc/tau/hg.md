@@ -40,8 +40,8 @@ Furthermore, it is a general purpose tool and
 thus better suited for takelage. 
 As a bonus, takelage has the 
 [hg-git](https://foss.heptapod.net/mercurial/hg-git)
-plugin installed to we can use git remotes both for
-the projects and the subprojects.
+plugin installed so we can use git remotes both for
+the (git) projects and the (hg) subprojects.
 
 <a name="warning"/>
 

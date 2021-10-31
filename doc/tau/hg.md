@@ -50,14 +50,10 @@ the (git) projects and the (hg) subprojects.
 Mercurial repositories which are themselves controlled
 by another code revision tool like git should only
 exist in one git branch. 
-Otherwise you might have to merge files in `.hg`
-and you definitely want to avoid that.
-That's why tau defines a **git hg branch** through the
-`git_hg_branch` setting, which is by default 
-git's `main` branch.
-`tau hg` will refuse to operate on any other branch
-but you can choose your favorite git hg branch by setting
-[`git_hg_branch: main` to a different value.
+Otherwise you might have to merge files in
+`.hg` directories and you definitely want to avoid that.
+That's why tau defines a `git_hg_branch: 'main'` branch.
+`tau hg` will refuse to operate on any other branch.
 
 <a name="hg"/>
 

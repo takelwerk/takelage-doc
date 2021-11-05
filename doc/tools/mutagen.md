@@ -9,6 +9,7 @@
 - [Usage tau mutagen socket](#socket)
   - [tau mutagen socket check](#socketcheck)
   - [tau mutagen socket create](#socketcreate)
+  - [tau mutagen socket docker](#socketdocker)
   - [tau mutagen socket list](#socketlist)
   - [tau mutagen socket terminate](#socketterminate)
 
@@ -28,29 +29,26 @@ that occur when you use a command and control server like `takelage`.
 It's fairly common for linux command line tools 
 to use unix sockets for client server communication.
 One of those commands is `docker`. 
-It communicates of the socket file _/var/run/docker.sock_.
+
 As we want a seamless experience it should not matter
 whether you call `docker` on your host machine or
 inside a `takelage` container.
 
-But `docker` is a special case as `takelage` is itself
-a `docker` container. It is easy to mount 
-the docker socket file as a volume inside the 
-container (see 
-[`cmd_docker_container_create](https://github.com/takelwerk/takelage-cli/blob/main/lib/takelage/default.yml)).
-Unfortunately, due to limits of the docker
-implementation mounting socket files of other
-programs does not yield satisfactory results.
+Inside of a `takelage` container docker uses the socket file
+_/var/run/docker.sock_.
+`takelage` uses `mutagen` to connect the socket file inside of the container 
+with the docket socket file on your host.
+But you may as well connect the socket file in the local `takelage` container
+with a docker socket file on a remote cloud server.
 
-`takelage` uses `mutagen` to solve this problems.
 When you create a new takelage container with
 `tau login` a couple of unix sockets 
 will be forwarded to the container.
-Currently, these are the `gnupg` agent sockets
+Currently, these are the _docker_ socket, the `gnupg` agent sockets
 _gpg_ and _gpg-ssh_ as well as the _mutagen_ daemon socket.
 
 So `docker`, `mutagen`, `gpg` and `ssh` should behave
-the same regardless if your use them inside or outside
+the same regardless if you use them inside or outside
 of a `takelage` container.
 
 ### Port Forwarding
@@ -72,7 +70,6 @@ but it might not be ok if you want to sync your source code
 to your locally running production container.
 If your tests run 20x slower in your container than on
 your host then try syncing them with `mutagen`.
-
 
 <a name="socket"/>
 
@@ -96,6 +93,16 @@ with a name appended to the hash identifier
 of the container. 
 It first expects the path to the socket file in the container 
 and then the path to the socket file on the host.
+
+<a name="socketlist"/>
+
+### tau mutagen socket docker
+
+`tau mutagen socket docker [OUT]`
+creates a docker socket for the current container
+with 'docker' appended to the hash identifier
+of the container.
+It expects the path to the socket file on the host.
 
 <a name="socketlist"/>
 

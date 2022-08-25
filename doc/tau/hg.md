@@ -11,6 +11,7 @@
     - [tau hg list](#list)
     - [tau hg pull](#pull)
     - [tau hg push](#push)
+- [New repository](#new)
 
 <a name="introduction"/>
 
@@ -101,3 +102,21 @@ below the project root folder and pull updates from remote.
 below the project root folder,
 add and commit new and changed files 
 and then push the new changesets.
+
+<a name="new"/>
+
+# New repository
+
+If you want to create a new _hg on a git repos server
+than you obviously first need to create a new git repo on the server.
+
+Then enter the directory you want to push
+in a takelage environment and run:
+
+```bash
+hg init
+hg bookmarks main
+hg addremove -A
+hg commit -m "Initial commit"
+hg push git@mygitserver:myuser/myrepo.git
+```

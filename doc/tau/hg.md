@@ -116,7 +116,7 @@ in a takelage environment and run:
 ```bash
 hg init
 hg bookmarks main
-hg addremove -A
+hg addremove
 hg commit -m "Initial commit"
 hg push git@mygitserver:myuser/myrepo.git
 ```

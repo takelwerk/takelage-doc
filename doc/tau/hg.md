@@ -107,7 +107,7 @@ and then push the new changesets.
 
 # New repository
 
-If you want to create a new _hg on a git repos server
+If you want to create a new hg repo on a git repos server
 than you obviously first need to create a new git repo on the server.
 
 Then enter the directory you want to push

@@ -22,7 +22,7 @@ another word from the nautical world.
 [tackle](https://en.wikipedia.org/wiki/Block_and_tackle). 
 It is 
 [pronounced](https://www.dwds.de/wb/Takel)
-with a long “a”.
+with a long “a” as in foobar.
 
 [Tau](https://de.wikipedia.org/wiki/Tauwerk) is the German word for 
 [rope](https://en.wikipedia.org/wiki/Rope). 

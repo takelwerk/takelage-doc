@@ -19,7 +19,8 @@ On your host system install these prerequisites:
 - [mutagen](https://mutagen.io/)
 
 For the global takelage `tau` command line interface you'll need `ruby`.
-You may use your system ruby but it is recommended to install it as user:
+You may use your system ruby but it is recommended to install it
+as a non-privileged user:
 - [ruby via rvm](https://rvm.io): First install gpg keys then:
 ```bash
 \curl -sSL https://get.rvm.io | bash -s stable --ruby

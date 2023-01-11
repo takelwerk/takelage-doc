@@ -61,3 +61,4 @@ build, test and deploy os images.
 - [mutagen](doc/tools/mutagen.md)
 - [packer](doc/tools/packer.md)
 - [rake](doc/tools/rake.md)
+- [kubernetes](doc/tools/kubernetes.md)

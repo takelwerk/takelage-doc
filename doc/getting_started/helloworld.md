@@ -39,6 +39,12 @@ tau init packer docker helloworld
 
 At the end of the next prompt you should see `(main+)` in orange. This means that you are on the git main branch, all work is committed but you have not yet pushed your work to a remote tracking branch. Uncommitted changes are indicated by a red `(mybranch*)`. When the day‘s work is done always make sure your branch is green (no `*` or `+` next to the branch name for those of us who are red–green color blind).
 
+Have a look at `git log` and check your identity. If you don't like what you see then consider setting `git config user.name` and `git config user.email` and `git config user.signingKey` for this repo. Afterwards run the next command to change the metadata of the first (and only) commit: 
+
+```bash
+git rebase -i --root --exec 'git commit --amend --no-edit --reset-author'
+```
+
 Collect some system status information:
 
 ```bash

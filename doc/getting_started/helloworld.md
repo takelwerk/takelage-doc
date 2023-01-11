@@ -42,7 +42,7 @@ At the end of the next prompt you should see `(main+)` in orange. This means tha
 Have a look at `git log` and check your identity. If you don't like what you see then consider setting `git config user.name` and `git config user.email` and `git config user.signingKey` for this repo. Afterwards run the next command to change the metadata of the first (and only) commit: 
 
 ```bash
-git rebase -i --root --exec 'git commit --amend --no-edit --reset-author'
+git rebase --root --exec 'git commit --amend --no-edit --reset-author'
 ```
 
 Collect some system status information:

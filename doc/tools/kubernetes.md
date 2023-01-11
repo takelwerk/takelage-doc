@@ -13,8 +13,8 @@
 
 [Kubernetes](https://kubernetes.io)
 is the de facto standard to run docker containers in production.
-The takelage framework creates docker containers.
-To test these containers in a local kubernetes development environment
+To test the docker containers created with the takelage framework
+in a local kubernetes development environment
 takelage comes with kubernetes in docker preinstalled:
 [k3d](https://k3d.io)
 (which is a wrapper for

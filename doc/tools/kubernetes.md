@@ -27,11 +27,11 @@ takelage comes with kubernetes in docker preinstalled:
 Create a new kubernetes cluster:
 
 ```bash
-k3d cluster create mycluster
+k3d cluster create
 ```
 
-Run `kubectl` to talk to kubernetes:
+Run `kubectl` to run an interactive pod in kubernetes:
 
 ```bash
-kubectl get nodes
+kubectl run -it --rm debian --image debian -- bash
 ```

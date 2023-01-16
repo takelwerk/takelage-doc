@@ -30,8 +30,18 @@ Create a new kubernetes cluster:
 k3d cluster create
 ```
 
-Run `kubectl` to run an interactive pod in kubernetes:
+Run 
+[kubectl](https://kubernetes.io/docs/reference/kubectl/)
+to get an interactive shell in kubernetes:
 
 ```bash
 kubectl run -it --rm debian --image debian -- bash
 ```
+
+The 
+[helm](https://helm.sh)
+package manager is installed in takelage.
+
+The pytest plugin 
+[kubetest](https://kubetest.readthedocs.io/)
+is available for integration tests.

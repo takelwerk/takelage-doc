@@ -10,9 +10,9 @@ as an example on how to install takelage on ubuntu.
 
 On your host system install these prerequisites:
 - [docker](https://docs.docker.com/get-docker/)
-  If you use linux be sure to follow the
+  (If you use linux be sure to follow the
   [postinstall](https://docs.docker.com/engine/install/linux-postinstall/)
-  guide
+  guide)
 - [gnupg](https://gnupg.org/)
 - [git](https://git-scm.com)
 - [gopass](https://www.gopass.pw)

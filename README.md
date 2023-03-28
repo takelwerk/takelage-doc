@@ -58,6 +58,7 @@ build, test and deploy os images.
 
 ### Tools
 
+- [molecule](doc/tool/debug.md)
 - [gopass](doc/tools/gopass.md)
 - [mutagen](doc/tools/mutagen.md)
 - [packer](doc/tools/packer.md)

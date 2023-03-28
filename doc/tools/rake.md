@@ -159,6 +159,18 @@ production environment using the
 [takelbase](https://hub.docker.com/r/takelwerk/takelbase)
 docker base image.
 
+Debug information can be obtained by adding `ANSIBLE_VERBOSITY`
+and `vvv` configuration options:
+
+```yaml
+provisioner:
+  name: ansible
+  env:
+    ANSIBLE_VERBOSITY: 3
+  options:
+    vvv: true
+```
+
 Similar tasks exist for every molecule command for the project
 and for every ansible role.
 So in this case, a handful of Rakefiles can lead to dozens of tasks.

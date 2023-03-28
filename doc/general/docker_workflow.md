@@ -50,7 +50,8 @@ We start with a base image, for example `debian/stable-slim`.
 Then we use the above outlined workflow to create a new base image,
 for example `takelwerk/takelbase` which has python and systemd installed.
 Then we use the same pattern to develop our project 
-based on that new base image.
+based on that new base image. 
+takelage is built for the `amd64` and `arm64` cpu architectures.
 
 We can use any kind of base image, for example the base image
 that Google provides for its 

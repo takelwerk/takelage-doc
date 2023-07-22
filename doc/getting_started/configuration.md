@@ -8,6 +8,7 @@ takelage uses the GnuPG SSH agent. You need:
 
 - `AddKeysToAgent yes` in your `~/.ssh/config`
 - `enable-ssh-support` in your `~/.gnupg/gpg-agent.conf`
+- `auto-expand-secmem` in your `~/.gnupg/gpg-agent.conf`
 - `gpgconf --launch gpg-agent` in your `.bash_profile`/`.bashrc`
 - `export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)`
   in your `.bash_profile`/`.bashrc`

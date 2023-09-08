@@ -231,5 +231,5 @@ kubectl config set-context --current --namespace=gitlab
 
 Install the helm chart (adapt the path):
 ```
-helm install --namespace gitlab gitlab-runner -f $GITLAB_HOME/../runner/gitlab-runner/values.yaml gitlab/gitlab-runner
+helm install --namespace gitlab gitlab-runner -f $GITLAB_HOME/gitlab-runner/values.yaml gitlab/gitlab-runner
 ```

@@ -1,4 +1,22 @@
-# GitLab/Docker with gitlab-runner/k3d on Apple Silicon
+# gitlab/docker with gitlab-runner/k3d on Apple Silicon
+
+## Create your own factory
+
+GitHub Actions does not have arm64 runners.
+But any Apple Silicon based machine can
+be used to run a 
+[GitLab](https://gitlab.com/)
+CI/CD platform and a
+[k3d](https://k3d.io/)
+kubernetes cluster for the gitlab runner 
+using Docker Desktop.
+This is how the takelage arm64 images are built.
+
+A gitlab docker image is officially available
+for amd64 but not for arm64. Unofficially, it is.
+
+We install k3d via
+[homebrew](https://brew.sh/).
 
 ## Prerequisites
 
@@ -17,9 +35,7 @@ may be on a new machine: remember this advice.
 
 ### Run GitLab via Docker Compose 
 
-We run
-[GitLab](https://gitlab.com)
-in a docker container by using
+We run GitLab in a docker container by using
 [Docker Compose](https://docs.docker.com/compose/).
 
 ### Official GitLab Docker images (for amd64 only)
@@ -101,16 +117,14 @@ If unsure, select „Run untagged jobs“.
 
 ## Add Kubernetes: Get k3d
 
-We use 
-[k3d](https://k3d.io/) to house the 
+We use k3d to house the 
 [GitLab Runners](https://docs.gitlab.com/runner/).
 We can then use the
 [Kubernetes executor](https://docs.gitlab.com/runner/executors/kubernetes.html)
 to run our GitLab pipelines in
 [Kubernetes](https://kubernetes.io/)
 
-Add k3d & friends via
-[homebrew](https://brew.sh/)
+Add k3d & friends via homebrew:
 ```bash
 brew install k3d kubernetes-cli helm
 ```
@@ -231,7 +245,7 @@ Make this namespace the default namespace:
 kubectl config set-context --current --namespace=gitlab
 ```
 
-Install the helm chart (adapt the path):
+Install (or `helm 2upgrade` after changes) the helm chart (adapt the path):
 ```
 helm install --namespace gitlab gitlab-runner -f $GITLAB_HOME/gitlab-runner/values.yaml gitlab/gitlab-runner
 ```

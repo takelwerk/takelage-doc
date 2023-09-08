@@ -95,7 +95,9 @@ to confirm the `root` password reset.
 
 Get a `runnnerToken`
 [in the GitLab UI](https://docs.gitlab.com/ee/ci/runners/register_runner.html#generate-an-authentication-token).
+
 Create a shared runner with a runner authentication token.
+If unsure, select „Run untagged jobs“.
 
 ## Add Kubernetes: Get k3d
 

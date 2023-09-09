@@ -258,6 +258,7 @@ start() {
   k3d cluster create gitlab
   kubectl create namespace gitlab
   helm install --namespace gitlab gitlab-runner -f $GITLAB_HOME/../gitlab-runner/values.yaml gitlab/gitlab-runner
+  kubectl config set-context --current --namespace gitlab
 }
 
 stop() {

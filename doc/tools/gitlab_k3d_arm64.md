@@ -249,3 +249,35 @@ You may make this namespace the default namespace:
 ```bash
 kubectl config set-context --current --namespace=gitlab
 ```
+
+You may want to script the cluster commands:
+```bash
+#!/usr/bin/env bash
+
+start() {
+  k3d cluster create gitlab
+  kubectl create namespace gitlab
+  helm install --namespace gitlab gitlab-runner -f $GITLAB_HOME/../gitlab-runner/values.yaml gitlab/gitlab-runner
+}
+
+stop() {
+  k3d cluster delete gitlab
+}
+
+case "$1" in
+  start)
+    start
+    ;;
+  stop)
+    stop
+    ;;
+  restart)
+    stop
+    start
+    ;;
+  *)
+    echo "Usage: $0 {start|stop|restart}" >&2
+    exit 1
+    ;;
+esac
+```

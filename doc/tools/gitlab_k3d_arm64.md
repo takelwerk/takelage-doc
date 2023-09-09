@@ -129,11 +129,6 @@ Add k3d & friends via homebrew:
 brew install k3d kubernetes-cli helm
 ```
 
-Create a gitlab kubernetes cluster:
-```bash
-k3d cluster create gitlab
-```
-
 ## Configure a kubernetes runner
 
 We use the GitLab Runner
@@ -235,17 +230,22 @@ if you want to run docker in docker (dind).
 
 ## Deploy a kubernetes runner
 
+Create a gitlab kubernetes cluster:
+```bash
+k3d cluster create gitlab
+```
+
 Create a namespace:
 ```bash
 kubectl create namespace gitlab
 ```
 
-Make this namespace the default namespace:
-```bash
-kubectl config set-context --current --namespace=gitlab
+Install (or `helm upgrade` after changes) the helm chart (adapt the path):
+```
+helm install --namespace gitlab gitlab-runner -f $GITLAB_HOME/../gitlab-runner/values.yaml gitlab/gitlab-runner
 ```
 
-Install (or `helm 2upgrade` after changes) the helm chart (adapt the path):
-```
-helm install --namespace gitlab gitlab-runner -f $GITLAB_HOME/gitlab-runner/values.yaml gitlab/gitlab-runner
+You may make this namespace the default namespace:
+```bash
+kubectl config set-context --current --namespace=gitlab
 ```

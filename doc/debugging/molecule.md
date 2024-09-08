@@ -38,8 +38,7 @@ we use the first method.
 ## Logging in
 
 When `rake ansible:molecule:converge` fails you can use
-`rake ansible:molecule:login` to log in to the container
-and inspect the environment that caused the problem.
+`rake ansible:molecule:login` to log in to the container.
 You can often run the failing command interactively and
 reproduce the error this way in a disposable environment.
 

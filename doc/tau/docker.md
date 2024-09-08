@@ -8,6 +8,7 @@
   - [docker](#docker)
 - [Usage tau docker container](#container)
   - [tau login](#login)
+  - [tau list](#list)
   - [tau prune](#prune)
   - [tau clean](#clean)
   - [tau command](#command)
@@ -69,7 +70,21 @@ takelage container it creates.
 You cannot log in to a takelage container
 from within a takelage container (“matryoshka test”).
 
-<a name="prune"/>
+<a name="list"/>
+
+## tau list: list takelage containers
+
+`tau list` which is an alias for `tau docker container list`
+will output an ansible style YAML inventory of all running
+takelage containers.
+The containers will be listed 
+either as active (i.e. there is an active login shell)
+or as orphaned (i.e. there is no active login shell).
+The orphaned containers can be removed with `tau prune`.
+
+```bash
+tau prune
+```
 
 ## tau prune: delete orphaned takelage containers
 

@@ -48,7 +48,7 @@ Go into your project directory on your host machine
 and use `tau login` to get a second shell in the
 same takelage container.
 
-Fix your ansible script and run
+Fix your ansible scripts and run
 `rake ansible:molecule:converge`
 in the first terminal window again.
 

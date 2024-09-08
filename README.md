@@ -61,3 +61,7 @@ build, test and deploy os images.
 - [rake](doc/tools/rake.md)
 - [kubernetes](doc/tools/kubernetes.md)
 - [gitlab and k3d on arm64](doc/tools/gitlab_k3d_arm64.md)
+
+### Debugging
+
+- [molecule](doc/debugging/molecule.md)

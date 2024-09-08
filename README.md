@@ -64,4 +64,4 @@ build, test and deploy os images.
 
 ### Debugging
 
-- [molecule](doc/debugging/molecule.md)
+- [Ansible/Pytest and Molecule](doc/debugging/molecule.md)

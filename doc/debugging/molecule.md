@@ -88,6 +88,15 @@ verifier:
     m: run_only_this_test
 ```
 
+Add colors to your pytest output:
+
+```yaml
+verifier:
+  name: testinfra
+  env:
+    PYTEST_ADDOPTS: '--color=yes'
+```
+
 <a name="ansible_variables"/>
 
 ## Ansible variables

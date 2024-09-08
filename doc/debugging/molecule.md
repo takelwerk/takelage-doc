@@ -23,8 +23,8 @@ a docker container with takelage:
 The first option uses molecule to create a container from
 a base image. Then it provisions this container with ansible.
 
-The second option uses packer and ansible to build first build
-an image. Then is uses molecule to create a container from this image.
+The second option uses packer and ansible to first build an image.
+Then is uses molecule to create a container from this image.
 
 When we want to debug our ansible scripts or our python tests
 we use the first method.

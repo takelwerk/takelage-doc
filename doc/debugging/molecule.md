@@ -33,7 +33,7 @@ we use the first method.
 
 # Techniques
 
-<a name="logging in"/>
+<a name="logging_in"/>
 
 ## Logging in
 

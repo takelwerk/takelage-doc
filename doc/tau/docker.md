@@ -83,7 +83,13 @@ or as orphaned (i.e. there is no active login shell).
 The orphaned containers can be removed with `tau prune`.
 
 ```bash
-tau prune
+tau list
+```
+
+or even shorter:
+
+```bash
+tau ls
 ```
 
 ## tau prune: delete orphaned takelage containers

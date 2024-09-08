@@ -6,6 +6,7 @@
 
 - [Introduction](#introduction)
 - [Techniques](#techniques)
+  - [Logging in](#logging in)
   - [Isolating pytests](#isolating_pytests)
   - [Ansible variables](#ansible_variables)
 
@@ -31,6 +32,16 @@ we use the first method.
 <a name="techniques"/>
 
 # Techniques
+
+<a name="logging in"/>
+
+## Logging in
+
+When `rake ansible:molecule:converge` fails you can use
+`rake ansible:molecule:login` to log in to the container
+and inspect the environment that caused the problem.
+You can often run the failing command interactively and
+reproduce the error this way in a disposable environment.
 
 <a name="isolating_pytests"/>
 

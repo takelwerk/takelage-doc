@@ -92,6 +92,8 @@ or even shorter:
 tau ls
 ```
 
+<a name="prune"/>
+
 ## tau prune: delete orphaned takelage containers
 
 `tau prune` which is an alias for `tau docker container prune`

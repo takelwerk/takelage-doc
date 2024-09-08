@@ -6,7 +6,7 @@
 
 - [Introduction](#introduction)
 - [Techniques](#techniques)
-  - [Logging in](#logging in)
+  - [Logging in](#logging_in)
   - [Isolating pytests](#isolating_pytests)
   - [Ansible variables](#ansible_variables)
 

@@ -5,8 +5,10 @@
 ## Overview
 
 - [Introduction](#introduction)
-- [Techniques](#techniques)
-  - [Logging in](#logging_in)
+- [Ansible](#ansible)
+  - [Logging in](#log_in_ansible)
+- [Pytest](#pytest)
+  - [Logging in](#log_in_python)
   - [Isolating pytests](#isolating_pytests)
   - [Ansible variables](#ansible_variables)
 
@@ -22,26 +24,47 @@ a docker container with takelage:
 
 The first option uses molecule to create a container from
 a base image. Then it provisions this container with ansible.
-Use this method to debug your ansible scripts.
+Use this method to debug your [ansible](#ansible) scripts.
 
 The second option uses packer and ansible to first build an image.
 Then is uses molecule to create a container from this image.
-Use this method to debug your pytests.
+Use this method to debug your [pytests](#pytest).
 
-<a name="techniques"/>
+<a name="Ansible"/>
 
-# Techniques
+# Ansible
 
-<a name="logging_in"/>
+<a name="log_in_ansible"/>
 
-## Logging in
+## Log in
 
-When `rake ansible:molecule:converge` fails you can use
+When `rake ansible:molecule:converge` fails you can run
 `rake ansible:molecule:login` to log in to the container.
 You can often run the failing command interactively and
-reproduce the error this way in a disposable environment.
+reproduce the error in a disposable environment.
+
+You should do this in a second terminal window.
+Go into your project directory on your host machine
+and use `tau login` to get a second shell in the
+same takelage container.
+
+Fix your ansible script and run
+`rake ansible:molecule:converge`
+in the first terminal window again.
+
+<a name="pytest">
+
+# Pytest
 
 <a name="isolating_pytests"/>
+
+## Log in
+
+After a `rake images:project:molecule:converge` 
+and a failing `rake images:project:molecule:verify`
+you can run `rake images:project:molecule:login` 
+to log in to the container.
+You can then inspect the test environment to debug your pytests.
 
 ## Isolating pytests
 

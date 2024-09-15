@@ -7,6 +7,7 @@
 - [Introduction](#introduction)
 - [Ansible](#ansible)
   - [Logging in](#log_in_ansible)
+  - [Ansible arguments](#ansible_arguments)
 - [Pytest](#pytest)
   - [Logging in](#log_in_python)
   - [Isolating pytests](#isolating_pytests)
@@ -30,7 +31,7 @@ The second option uses packer and ansible to first build an image.
 Then is uses molecule to create a container from this image.
 Use this method to debug your [pytests](#pytest).
 
-<a name="Ansible"/>
+<a name="ansible"/>
 
 # Ansible
 
@@ -51,6 +52,19 @@ same takelage container.
 Fix your ansible scripts and run
 `rake ansible:molecule:converge`
 in the first terminal window again.
+
+<a name="ansible_arguments"/>
+
+## Ansible arguments
+
+When we use molecule to provision a server
+then we don't interact with ansible directly.
+Use `--` to pass arguments like `-vvv` to ansible
+through molecule:
+
+```bash
+molecule converge -- -vvv
+```
 
 <a name="pytest">
 
@@ -88,6 +102,8 @@ verifier:
     m: run_only_this_test
 ```
 
+This is an example on how to set pytest command line options using molecule.
+
 Add colors to your pytest output:
 
 ```yaml
@@ -96,6 +112,8 @@ verifier:
   env:
     PYTEST_ADDOPTS: '--color=yes'
 ```
+
+This is an example on how to set pytest environment variables using molecule.
 
 <a name="ansible_variables"/>
 

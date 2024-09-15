@@ -6,10 +6,10 @@
 
 - [Introduction](#introduction)
 - [Ansible](#ansible)
-  - [Logging in](#log_in_ansible)
+  - [Log in](#log_in_ansible)
   - [Ansible arguments](#ansible_arguments)
 - [Pytest](#pytest)
-  - [Logging in](#log_in_pytest)
+  - [Log in](#log_in_pytest)
   - [Isolating pytests](#isolating_pytests)
   - [Ansible variables](#ansible_variables)
 

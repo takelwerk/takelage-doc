@@ -9,7 +9,7 @@
   - [Logging in](#log_in_ansible)
   - [Ansible arguments](#ansible_arguments)
 - [Pytest](#pytest)
-  - [Logging in](#log_in_python)
+  - [Logging in](#log_in_pytest)
   - [Isolating pytests](#isolating_pytests)
   - [Ansible variables](#ansible_variables)
 
@@ -70,7 +70,7 @@ molecule converge -- -vvv
 
 # Pytest
 
-<a name="isolating_pytests"/>
+<a name="log_in_pytest"/>
 
 ## Log in
 
@@ -79,6 +79,8 @@ and a failing `rake images:project:molecule:verify`
 you can run `rake images:project:molecule:login` 
 to log in to the container.
 You can then inspect the test environment to debug your pytests.
+
+<a name="isolating_pytests"/>
 
 ## Isolating pytests
 
